@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="c1-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30bdc0"/>
+      <stop offset="100%" style="stop-color:#c0d950"/>
+    </linearGradient>
+    <linearGradient id="c1-ring" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c0d950;stop-opacity:0.1"/>
+      <stop offset="30%" style="stop-color:#c0d950;stop-opacity:0.8"/>
+      <stop offset="70%" style="stop-color:#30bdc0;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#30bdc0;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Planet Saturn -->
+  <circle cx="120" cy="85" r="35" fill="url(#c1-grad)" opacity="0.9"/>
+
+  <!-- Saturn ring (ellipse behind) -->
+  <ellipse cx="120" cy="85" rx="65" ry="14" fill="none" stroke="url(#c1-ring)" stroke-width="4" opacity="0.7"/>
+
+  <!-- Starlink X integrated -->
+  <!-- Left stroke of X -->
+  <path d="M 95 110 L 115 75 L 108 75 L 88 110 Z" fill="#fff" opacity="0.95"/>
+  <!-- Right stroke of X (the swoosh) -->
+  <path d="M 105 60 Q 130 65 175 48" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" opacity="0.95"/>
+  <path d="M 135 105 L 115 75 L 122 75 L 142 105 Z" fill="#fff" opacity="0.95"/>
+
+  <!-- Company name -->
+  <text x="200" y="75" font-family="'Open Sans', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="3">STAR</text>
+  <text x="303" y="75" font-family="'Open Sans', Arial, sans-serif" font-size="28" font-weight="300" fill="url(#c1-grad)" letter-spacing="3">CONNECT</text>
+
+  <text x="200" y="100" font-family="'Open Sans', Arial, sans-serif" font-size="12" font-weight="400" fill="#8a9bae" letter-spacing="6">SOLUTIONS</text>
+</svg>

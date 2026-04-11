@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tenders – Space Communication Technologies</title>
+    <title>Tenders — StarConnect Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title-key="tenders.title">
 
-    <!-- Space Background -->
     <div class="space-bg">
         <div class="stars-small"></div>
         <div class="stars-medium"></div>
         <div class="stars-large"></div>
     </div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Space Communication Technologies">
+                    <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions">
                 </a>
                 <nav class="main-nav">
                     <button class="mobile-toggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li class="has-dropdown">
-                            <a href="highlights.html">HIGHLIGHTS</a>
-                            <ul class="dropdown">
-                                <li><a href="highlights.html">Updates</a></li>
-                                <li><a href="highlights.html#announcements">Announcements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">SERVICES &amp; PRODUCTS</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html#interim">Interim Solution</a></li>
-                                <li><a href="services.html#omansat1">Omansat-1 Project</a></li>
-                            </ul>
-                        </li>
-                        <li class="active"><a href="tenders.html">TENDERS</a></li>
-                        <li><a href="careers.html">CAREERS</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li class="active"><a href="tenders.html" data-i18n="nav.tenders">Tenders</a></li>
+                        <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li class="has-dropdown lang-dropdown">
                             <a href="#" class="lang-toggle"><i class="fa-solid fa-globe"></i></a>
                             <ul class="dropdown lang-menu">
-                                <li><a href="#" class="lang-option active"><span class="flag flag-fr"></span> FR</a></li>
-                                <li><a href="#" class="lang-option"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="en"><span class="flag flag-gb"></span> EN</a></li>
+                                <li><a href="#" class="lang-option" data-lang="fr"><span class="flag flag-fr"></span> FR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="ar"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="bn"><span class="flag flag-bd"></span> BN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,65 +51,94 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background-image: url('assets/images/sub-header-bg.jpg')">
+    <section class="page-banner" style="background-image: url('assets/images/artemis-earth.jpg')">
         <div class="banner-overlay">
             <div class="container">
-                <h1>Tenders</h1>
+                <h1 data-i18n="tenders.title">Tenders</h1>
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a> <span>/</span> <span>Tenders</span>
+                    <a href="index.html" data-i18n="nav.home">Home</a> <span>/</span> <span data-i18n="tenders.title">Tenders</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tenders Content -->
     <section class="page-section">
         <div class="container">
-            <div class="tender-table-wrapper">
-                <table class="tender-table">
-                    <thead>
-                        <tr>
-                            <th>Tender Number</th>
-                            <th>Description</th>
-                            <th>Tender Fee</th>
-                            <th>Collection Deadline</th>
-                            <th>Bid Submission Date</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>SCT-T-001-2025</td>
-                            <td>VSAT Terminals Field Managed Services</td>
-                            <td>100 R.O (non-refundable)</td>
-                            <td>08/01/2025</td>
-                            <td>02/02/2025</td>
-                            <td><span class="status-badge closed">Closed</span></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h2 class="section-title" data-i18n="tenders.heading">Tenders and ongoing projects</h2>
+
+            <div class="visual-block">
+                <div class="visual-block-image">
+                    <img src="assets/images/dubai-marina.jpg" alt="Dubai Marina">
+                </div>
+                <div class="visual-block-content">
+                    <h3 data-i18n="tenders.project.title">Dubai Marina, 2026</h3>
+                    <p data-i18n="tenders.project.text">A 200 unit building fully connected by StarConnect Solutions. Deployment of the three packages according to floors, redundant Starlink backbone, solar autonomy on common equipment.</p>
+                    <p><strong data-i18n="tenders.project.status">Status: deployment in progress</strong></p>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <div class="stat-card-icon"><i class="fa-solid fa-building"></i></div>
+                    <div class="stat-card-value" data-i18n="tenders.stat1.value">200</div>
+                    <div class="stat-card-label" data-i18n="tenders.stat1.label">connected units</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon"><i class="fa-solid fa-calendar"></i></div>
+                    <div class="stat-card-value" data-i18n="tenders.stat2.value">2026</div>
+                    <div class="stat-card-label" data-i18n="tenders.stat2.label">planned delivery</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <div class="stat-card-value" data-i18n="tenders.stat3.value">3</div>
+                    <div class="stat-card-label" data-i18n="tenders.stat3.label">packages deployed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="stat-card-value" data-i18n="tenders.stat4.value">1600 Mb</div>
+                    <div class="stat-card-label" data-i18n="tenders.stat4.label">aggregated bandwidth</div>
+                </div>
+            </div>
+
+            <h3 class="section-title-left" style="margin-top: 60px;" data-i18n="tenders.timeline.title">Deployment timeline</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4 data-i18n="tenders.t1.title">Phase 1, survey and cabling</h4>
+                    <p data-i18n="tenders.t1.text">Site audit, installation of the fiber backbone and CAT 7 vertical risers.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 data-i18n="tenders.t2.title">Phase 2, Starlink activation</h4>
+                    <p data-i18n="tenders.t2.text">Installation of four Starlink antennas on the roof, immediate service activation.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 data-i18n="tenders.t3.title">Phase 3, unit connection</h4>
+                    <p data-i18n="tenders.t3.text">Connecting all 200 units, Wi-Fi 6 configuration and 5G backup.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4 data-i18n="tenders.t4.title">Phase 4, solar autonomy</h4>
+                    <p data-i18n="tenders.t4.text">Installation of solar panels powering the common equipment.</p>
+                </div>
             </div>
 
             <div class="tender-notes">
-                <p><strong>Important Note:</strong> SME bidders holding Riyada Cards are exempt from tender fees and bonds.</p>
+                <p data-i18n="tenders.note">For any tender participation or partnership request, contact us directly.</p>
             </div>
 
             <div class="tender-contact">
-                <h3>Tender Enquiries</h3>
+                <h3 data-i18n="tenders.contact.title">Tender enquiries</h3>
                 <div class="contact-details">
                     <div class="contact-detail">
                         <i class="fa-solid fa-envelope"></i>
                         <div>
-                            <strong>Tender Email</strong>
-                            <p>tender@omansat.com</p>
+                            <strong data-i18n="tenders.contact.email">Email</strong>
+                            <p>carle@orange.fr</p>
                         </div>
                     </div>
                     <div class="contact-detail">
                         <i class="fa-solid fa-clock"></i>
                         <div>
-                            <strong>Office Hours</strong>
-                            <p>7:00 AM to 2:00 PM, Sunday - Thursday</p>
+                            <strong data-i18n="tenders.contact.hours">Office hours</strong>
+                            <p data-i18n="tenders.contact.hoursval">Sunday to Thursday, 9:00 AM to 6:00 PM</p>
                         </div>
                     </div>
                 </div>
@@ -129,33 +146,34 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid four-col">
                 <div class="footer-col footer-contact">
-                    <p class="footer-company">Space Communication Technologies</p>
-                    <p>P.O Box 1795 Athaiba 130</p>
-                    <p>Phone: +968 24 968 341</p>
-                    <p>Email: info@omansat.com</p>
-                    <p>Website: www.omansat.com</p>
+                    <p class="footer-company" data-i18n="footer.company">StarConnect Solutions</p>
+                    <p data-i18n="footer.ceo">Stephane Carle, CEO</p>
+                    <p data-i18n="footer.phone">Phone: +971 55 224 0899</p>
+                    <p data-i18n="footer.email">Email: carle@orange.fr</p>
+                    <a href="https://wa.me/971552240899" class="whatsapp-link"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.whatsapp">WhatsApp</span></a>
+                    <div class="footer-qr">
+                        <img src="assets/images/qrcode.png" alt="QR Code WhatsApp">
+                    </div>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Who we are</a></li>
-                        <li><a href="about.html#vision"><i class="fa-solid fa-chevron-right"></i> Vision</a></li>
-                        <li><a href="about.html#mission"><i class="fa-solid fa-chevron-right"></i> Mission</a></li>
-                        <li><a href="about.html#values"><i class="fa-solid fa-chevron-right"></i> Values</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.whoweare">Who we are</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.vision">Vision</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mission">Mission</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.values">Values</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="highlights.html"><i class="fa-solid fa-chevron-right"></i> Highlights</a></li>
-                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services &amp; Products</a></li>
-                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact US</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> T&amp;Cs</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Data Privacy Policy</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.services">Services & Products</span></a></li>
+                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.careers">Careers</span></a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.terms">Terms & Conditions</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -168,11 +186,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2020. All rights reserved to Space Communication Technologies</p>
+                <p data-i18n="footer.copyright">Copyright 2026. All rights reserved to StarConnect Solutions</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="i18n.js?v=5"></script>
+    <script src="i18n-extra.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

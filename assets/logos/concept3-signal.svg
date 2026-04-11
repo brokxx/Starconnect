@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="c3-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#30bdc0"/>
+      <stop offset="100%" style="stop-color:#c0d950"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Central X mark -->
+  <!-- Left leg -->
+  <path d="M 80 115 L 108 70 L 100 70 L 72 115" fill="url(#c3-grad)" opacity="0.95"/>
+  <!-- Right leg -->
+  <path d="M 130 115 L 102 70 L 110 70 L 138 115" fill="url(#c3-grad)" opacity="0.95"/>
+  <!-- Swoosh -->
+  <path d="M 90 58 Q 120 62 170 40" stroke="url(#c3-grad)" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- Orbital rings / signal waves -->
+  <ellipse cx="105" cy="85" rx="55" ry="50" fill="none" stroke="#30bdc0" stroke-width="1.5" opacity="0.25" transform="rotate(-15, 105, 85)"/>
+  <ellipse cx="105" cy="85" rx="70" ry="60" fill="none" stroke="#30bdc0" stroke-width="1" opacity="0.15" transform="rotate(-15, 105, 85)"/>
+  <ellipse cx="105" cy="85" rx="85" ry="70" fill="none" stroke="#c0d950" stroke-width="0.8" opacity="0.1" transform="rotate(-15, 105, 85)"/>
+
+  <!-- Signal dots on orbits -->
+  <circle cx="160" cy="60" r="3" fill="#c0d950" opacity="0.7"/>
+  <circle cx="45" cy="105" r="2.5" fill="#30bdc0" opacity="0.5"/>
+  <circle cx="140" cy="130" r="2" fill="#c0d950" opacity="0.4"/>
+  <circle cx="60" cy="45" r="1.5" fill="#30bdc0" opacity="0.3"/>
+
+  <!-- Company name -->
+  <text x="200" y="72" font-family="'Open Sans', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff" letter-spacing="2">STAR</text>
+  <text x="296" y="72" font-family="'Open Sans', Arial, sans-serif" font-size="28" font-weight="300" fill="url(#c3-grad)" letter-spacing="2">CONNECT</text>
+
+  <text x="200" y="100" font-family="'Open Sans', Arial, sans-serif" font-size="12" font-weight="400" fill="#8a9bae" letter-spacing="6">SOLUTIONS</text>
+
+  <!-- Tagline -->
+  <text x="200" y="125" font-family="'Open Sans', Arial, sans-serif" font-size="9" font-weight="300" fill="#5a6a7a" letter-spacing="2" font-style="italic">CONNECTING THE FUTURE</text>
+</svg>

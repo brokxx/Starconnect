@@ -143,8 +143,9 @@
     });
 })();
 
-// ===== HEADER SCROLL EFFECT =====
+// ===== HEADER SCROLL EFFECT (home page only) =====
 (function() {
+    if (!document.body.classList.contains('home')) return;
     var header = document.querySelector('.main-header');
     if (!header) return;
 
@@ -156,4 +157,142 @@
             header.classList.remove('scrolled');
         }
     });
+})();
+
+// ===== PRELOADER (home only) =====
+(function() {
+    var preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    // Lock scroll while preloader is visible
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+
+    // Total animation: ~2.6s. Hide at 2.4s, remove at 3.0s.
+    function hide() {
+        preloader.classList.add('preloader-hide');
+        setTimeout(function() {
+            preloader.classList.add('preloader-removed');
+            document.documentElement.style.overflow = '';
+            document.body.style.overflow = '';
+        }, 700);
+    }
+
+    if (document.readyState === 'complete') {
+        setTimeout(hide, 2400);
+    } else {
+        window.addEventListener('load', function() {
+            setTimeout(hide, 2400);
+        });
+        // Safety fallback if load never fires
+        setTimeout(hide, 4500);
+    }
+})();
+
+// ===== SCROLL REVEAL ANIMATIONS =====
+(function() {
+    // Elements that reveal themselves (single element animations)
+    var singleSelectors = [
+        '.section-title',
+        '.section-title-left',
+        '.section-lead',
+        '.promise-content',
+        '.visual-block',
+        '.comparison-wrapper',
+        '.careers-slogan',
+        '.tender-notes',
+        '.tender-contact',
+        '.contact-grid',
+        '.service-block',
+        '.about-text',
+        '.about-image',
+        '.package-showcase-visual',
+        '.package-showcase-content'
+    ];
+
+    // Grids whose children should reveal in sequence (staggered)
+    var staggerSelectors = [
+        '.package-grid',
+        '.pillars-grid',
+        '.stats-row',
+        '.posts-grid',
+        '.hero-stats',
+        '.hero-ctas',
+        '.timeline'
+    ];
+
+    function addClass(el, cls) { el.classList.add(cls); }
+
+    singleSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+            addClass(el, 'reveal');
+        });
+    });
+
+    staggerSelectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+            addClass(el, 'reveal-stagger');
+        });
+    });
+
+    // Hero content should be visible immediately (no reveal on load)
+    var heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+            el.classList.remove('reveal', 'reveal-stagger');
+        });
+    }
+
+    // Intersection Observer
+    if (!('IntersectionObserver' in window)) {
+        // Fallback: show everything
+        document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+            el.classList.add('is-visible');
+        });
+        return;
+    }
+
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -60px 0px',
+        threshold: 0.12
+    });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el) {
+        observer.observe(el);
+    });
+})();
+
+// ===== HERO PARALLAX (home only) =====
+(function() {
+    if (!document.body.classList.contains('home')) return;
+    var slide = document.querySelector('.hero-slider .slide');
+    var heroContent = document.querySelector('.hero-content');
+    if (!slide) return;
+
+    var ticking = false;
+    function updateParallax() {
+        var y = window.scrollY;
+        var translate = Math.min(y * 0.35, 200);
+        slide.style.transform = 'translate3d(0, ' + translate + 'px, 0)';
+        if (heroContent) {
+            heroContent.style.opacity = Math.max(1 - y / 500, 0);
+            heroContent.style.transform = 'translate3d(0, ' + (y * 0.2) + 'px, 0)';
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }, { passive: true });
 })();

@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us – Space Communication Technologies</title>
+    <title>About — StarConnect Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title-key="about.title">
 
-    <!-- Space Background -->
     <div class="space-bg">
         <div class="stars-small"></div>
         <div class="stars-medium"></div>
         <div class="stars-large"></div>
     </div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Space Communication Technologies">
+                    <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions">
                 </a>
                 <nav class="main-nav">
                     <button class="mobile-toggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li class="active"><a href="about.html">ABOUT US</a></li>
-                        <li class="has-dropdown">
-                            <a href="highlights.html">HIGHLIGHTS</a>
-                            <ul class="dropdown">
-                                <li><a href="highlights.html">Updates</a></li>
-                                <li><a href="highlights.html#announcements">Announcements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">SERVICES &amp; PRODUCTS</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html#interim">Interim Solution</a></li>
-                                <li><a href="services.html#omansat1">Omansat-1 Project</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="tenders.html">TENDERS</a></li>
-                        <li><a href="careers.html">CAREERS</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li class="active"><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="tenders.html" data-i18n="nav.tenders">Tenders</a></li>
+                        <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li class="has-dropdown lang-dropdown">
                             <a href="#" class="lang-toggle"><i class="fa-solid fa-globe"></i></a>
                             <ul class="dropdown lang-menu">
-                                <li><a href="#" class="lang-option active"><span class="flag flag-fr"></span> FR</a></li>
-                                <li><a href="#" class="lang-option"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="en"><span class="flag flag-gb"></span> EN</a></li>
+                                <li><a href="#" class="lang-option" data-lang="fr"><span class="flag flag-fr"></span> FR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="ar"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="bn"><span class="flag flag-bd"></span> BN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,102 +51,149 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background-image: url('assets/images/about-banner.jpg')">
+    <section class="page-banner" style="background-image: url('assets/images/artemis-earth.jpg')">
         <div class="banner-overlay">
             <div class="container">
-                <h1>About Us</h1>
+                <h1 data-i18n="about.title">About</h1>
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
+                    <a href="index.html" data-i18n="nav.home">Home</a> <span>/</span> <span data-i18n="about.title">About</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Who We Are -->
     <section class="page-section">
         <div class="container">
-            <div class="about-who-grid">
-                <div class="about-who-text">
-                    <h2 class="section-title-left">WHO WE ARE</h2>
-                    <p>Space Communication Technologies (SCT) is a government-owned company established in 2018, under ITHCA Group and the Oman Investment Authority (OIA).</p>
-                    <p>The company's core purpose involves implementing the National Satellite project (OmanSat-1) and delivering satellite communication services. SCT recently obtained a Class 1 Telecom License, enabling it to serve residential, enterprise, and government clients throughout Oman and its territorial waters.</p>
-                    <p>The organization also resells international satellite imagery, remote sensing, and IoT solutions.</p>
+            <h2 class="section-title" data-i18n="about.heading">Four pillars for a team that delivers</h2>
+            <p class="section-lead" data-i18n="about.intro">Behind every StarConnect deployment stands an aligned, agile and committed team. Our method rests on four inseparable principles.</p>
+
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3 data-i18n="about.p1.title">Alignment</h3>
+                    <p data-i18n="about.p1.text">Shared goals, a clear vision and roles directly tied to your project stakes. Every contributor knows where they are heading and why.</p>
                 </div>
-                <div class="about-who-logo">
-                    <img src="assets/images/logo.png" alt="SCT Logo">
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3 data-i18n="about.p2.title">Dynamics</h3>
+                    <p data-i18n="about.p2.text">Trust, open communication and complementary profiles make the difference. Our engineers, technicians and project managers work in synergy, never in silos.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3 data-i18n="about.p3.title">Processes</h3>
+                    <p data-i18n="about.p3.text">Efficient workflows, short feedback loops and tools that reduce friction. We deliver fast because our processes are designed to deliver well.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3 data-i18n="about.p4.title">Culture</h3>
+                    <p data-i18n="about.p4.text">Recognition, psychological safety and balance. We sustain performance over time without burning out our teams. That is how quality becomes constant.</p>
+                </div>
+            </div>
+
+            <!-- Building connectivity showcase -->
+            <div class="visual-block" style="margin-top: 80px;">
+                <div class="visual-block-image building-image">
+                    <img src="assets/images/building-connectivity.jpg" alt="StarConnect building">
+                </div>
+                <div class="visual-block-content">
+                    <h3 data-i18n="home.starlink.title">Starlink stability, 400 Mb per antenna</h3>
+                    <p data-i18n="home.starlink.text">Installation in 1 to 2 weeks. Immediate activation. Four antennas equal 1,600 Mb combined. Can be switched on and off in less than one hour.</p>
+                    <h3 style="margin-top: 25px;" data-i18n="highlights.b1.title">Zero consumption</h3>
+                    <p data-i18n="highlights.b1.text">Thanks to our solar installations, your network equipment runs in full autonomy. Zero draw on the power grid, production entirely covered by solar panels.</p>
+                    <div class="hero-stats" style="justify-content: flex-start; gap: 35px; margin-top: 25px;">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value" data-i18n="home.stat1.value">400 Mb</div>
+                            <div class="hero-stat-label" data-i18n="home.stat1.label">per Starlink antenna</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value" data-i18n="home.stat2.value">1600 Mb</div>
+                            <div class="hero-stat-label" data-i18n="home.stat2.label">with 4 antennas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Autonomy / News content (formerly Highlights page) -->
+            <div style="margin-top: 80px;">
+                <h2 class="section-title" data-i18n="highlights.heading">Clean, silent and autonomous connectivity.</h2>
+
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="fa-solid fa-plug-circle-xmark"></i></div>
+                        <div class="stat-card-value" data-i18n="highlights.stat1.value">0 kWh</div>
+                        <div class="stat-card-label" data-i18n="highlights.stat1.label">grid consumption</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                        <div class="stat-card-value" data-i18n="highlights.stat2.value">4 to 6</div>
+                        <div class="stat-card-label" data-i18n="highlights.stat2.label">solar panels</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="stat-card-value" data-i18n="highlights.stat3.value">1 h</div>
+                        <div class="stat-card-label" data-i18n="highlights.stat3.label">activation time</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="stat-card-value" data-i18n="highlights.stat4.value">24/7</div>
+                        <div class="stat-card-label" data-i18n="highlights.stat4.label">continuous production</div>
+                    </div>
+                </div>
+
+                <div class="pillars-grid" style="margin-top: 60px;">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 data-i18n="highlights.b1.title">Zero consumption</h3>
+                        <p data-i18n="highlights.b1.text">Thanks to our solar installations, your network equipment runs in full autonomy.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                        <h3 data-i18n="highlights.b2.title">Flexible energy source</h3>
+                        <p data-i18n="highlights.b2.text">We adapt to your site: local electricity or complete photovoltaic solution.</p>
+                        <ul class="service-list">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="highlights.b2.i1">4 to 6 solar panels</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="highlights.b2.i2">Storage batteries</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="highlights.b2.i3">Continuous production, day and night</span></li>
+                        </ul>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 data-i18n="highlights.b3.title">Operational flexibility</h3>
+                        <p data-i18n="highlights.b3.text">Our systems come online within one hour. They shut down in less than one hour.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision -->
-    <section class="page-section bg-light">
-        <div class="container">
-            <div class="vision-mission-block">
-                <div class="vm-icon">
-                    <img src="assets/images/icon.png" alt="Vision">
-                </div>
-                <div class="vm-content">
-                    <h2 class="section-title-left">VISION</h2>
-                    <p>To become the leading space solutions services company providing solutions that are <strong>Robust, Integrated and Secure</strong>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission -->
-    <section class="page-section">
-        <div class="container">
-            <div class="vision-mission-block reverse">
-                <div class="vm-icon">
-                    <img src="assets/images/icon.png" alt="Mission">
-                </div>
-                <div class="vm-content">
-                    <h2 class="section-title-left">MISSION</h2>
-                    <p>To provide secure integrated space solutions that address client needs while fostering innovation. SCT is committed to developing its workforce and embedding core values throughout organizational culture.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values -->
-    <section class="page-section bg-light">
-        <div class="container">
-            <h2 class="section-title">VALUES</h2>
-            <div class="values-image">
-                <img src="assets/images/values.png" alt="Our Values">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid four-col">
                 <div class="footer-col footer-contact">
-                    <p class="footer-company">Space Communication Technologies</p>
-                    <p>P.O Box 1795 Athaiba 130</p>
-                    <p>Phone: +968 24 968 341</p>
-                    <p>Email: info@omansat.com</p>
-                    <p>Website: www.omansat.com</p>
+                    <p class="footer-company" data-i18n="footer.company">StarConnect Solutions</p>
+                    <p data-i18n="footer.ceo">Stephane Carle, CEO</p>
+                    <p data-i18n="footer.phone">Phone: +971 55 224 0899</p>
+                    <p data-i18n="footer.email">Email: carle@orange.fr</p>
+                    <a href="https://wa.me/971552240899" class="whatsapp-link"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.whatsapp">WhatsApp</span></a>
+                    <div class="footer-qr">
+                        <img src="assets/images/qrcode.png" alt="QR Code WhatsApp">
+                    </div>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Who we are</a></li>
-                        <li><a href="about.html#vision"><i class="fa-solid fa-chevron-right"></i> Vision</a></li>
-                        <li><a href="about.html#mission"><i class="fa-solid fa-chevron-right"></i> Mission</a></li>
-                        <li><a href="about.html#values"><i class="fa-solid fa-chevron-right"></i> Values</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.whoweare">Who we are</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.vision">Vision</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mission">Mission</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.values">Values</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="highlights.html"><i class="fa-solid fa-chevron-right"></i> Highlights</a></li>
-                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services &amp; Products</a></li>
-                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact US</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> T&amp;Cs</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Data Privacy Policy</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.services">Services & Products</span></a></li>
+                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.careers">Careers</span></a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.terms">Terms & Conditions</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -171,11 +206,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2020. All rights reserved to Space Communication Technologies</p>
+                <p data-i18n="footer.copyright">Copyright 2026. All rights reserved to StarConnect Solutions</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="i18n.js?v=5"></script>
+    <script src="i18n-extra.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

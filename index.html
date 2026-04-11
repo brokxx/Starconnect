@@ -3,53 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Communication Technologies – OmanSat</title>
-    <meta name="description" content="Space Communication Technologies LLC - Oman's national satellite operator">
+    <title>StarConnect Solutions, next generation connectivity</title>
+    <meta name="description" content="StarConnect Solutions - Starlink satellite Internet and tailor made network architectures">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="home" data-page-title-key="home.title">
 
+    <!-- Preloader (home only) -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-stars"></div>
+        <div class="preloader-stars preloader-stars-2"></div>
+        <div class="preloader-stars preloader-stars-3"></div>
+        <div class="preloader-core">
+            <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions" class="preloader-logo">
+            <div class="preloader-brand">STARCONNECT SOLUTIONS</div>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Space Communication Technologies">
+                    <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions">
                 </a>
                 <nav class="main-nav">
                     <button class="mobile-toggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li class="active"><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li class="has-dropdown">
-                            <a href="highlights.html">HIGHLIGHTS</a>
-                            <ul class="dropdown">
-                                <li><a href="highlights.html">Updates</a></li>
-                                <li><a href="highlights.html#announcements">Announcements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">SERVICES &amp; PRODUCTS</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html#interim">Interim Solution</a></li>
-                                <li><a href="services.html#omansat1">Omansat-1 Project</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="tenders.html">TENDERS</a></li>
-                        <li><a href="careers.html">CAREERS</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li class="active"><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="tenders.html" data-i18n="nav.tenders">Tenders</a></li>
+                        <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li class="has-dropdown lang-dropdown">
                             <a href="#" class="lang-toggle"><i class="fa-solid fa-globe"></i></a>
                             <ul class="dropdown lang-menu">
-                                <li><a href="#" class="lang-option active"><span class="flag flag-fr"></span> FR</a></li>
-                                <li><a href="#" class="lang-option"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="en"><span class="flag flag-gb"></span> EN</a></li>
+                                <li><a href="#" class="lang-option" data-lang="fr"><span class="flag flag-fr"></span> FR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="ar"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="bn"><span class="flag flag-bd"></span> BN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -68,72 +69,105 @@
     <!-- Hero Slider -->
     <section class="hero-slider">
         <div class="slider-wrapper">
-            <div class="slide active" style="background-image: url('assets/images/slider1.png')"></div>
-            <div class="slide" style="background-image: url('assets/images/slider2.jpg')"></div>
-            <div class="slide" style="background-image: url('assets/images/slider3.jpg')"></div>
-        </div>
-        <button class="slider-arrow prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
-        <button class="slider-arrow next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="slider-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
-
-    <!-- Highlights Section -->
-    <section class="highlights-section">
-        <div class="container">
-            <div class="highlights-header">
-                <h2 class="section-title">HIGHLIGHTS</h2>
-                <div class="highlights-tabs">
-                    <button class="tab-btn active" data-tab="updates">UPDATES</button>
-                    <span class="tab-separator">|</span>
-                    <button class="tab-btn" data-tab="announcements">ANNOUNCEMENTS</button>
+            <div class="slide active" style="background-image: url('assets/images/nasa-orion-moon.jpg')">
+                <div class="container hero-content">
+                    <h1 data-i18n="home.hero.title">3 prices. 3 technologies. 1 stability.</h1>
+                    <p data-i18n="home.hero.subtitle">Next generation connectivity for your buildings, wherever you are.</p>
+                    <div class="hero-ctas">
+                        <a href="services.html" class="btn-primary" data-i18n="home.cta">Discover our services</a>
+                        <a href="contact.html" class="btn-secondary" data-i18n="home.cta2">Request a quote</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value" data-i18n="home.stat1.value">400 Mb</div>
+                            <div class="hero-stat-label" data-i18n="home.stat1.label">per Starlink antenna</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value" data-i18n="home.stat2.value">1600 Mb</div>
+                            <div class="hero-stat-label" data-i18n="home.stat2.label">with 4 antennas</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value" data-i18n="home.stat3.value">1 h</div>
+                            <div class="hero-stat-label" data-i18n="home.stat3.label">activation or shutdown</div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="posts-grid">
-                <article class="post-card">
-                    <a href="#">
-                        <div class="post-image">
-                            <img src="assets/images/post1.jpg" alt="Omansat-1 Signature">
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <span class="post-date">December 4, 2025</span>
-                        <h3><a href="#">Airbus-built OneSat selected for the first Omani Communication satellite (Omansat-1)</a></h3>
-                        <p>Space Communication Technologies (SCT), Oman's national satellite operator, has awarded a contract...</p>
-                        <a href="#" class="read-more">Read more</a>
-                    </div>
-                </article>
-                <article class="post-card">
-                    <a href="#">
-                        <div class="post-image">
-                            <img src="assets/images/post2.png" alt="Royal Decree">
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <span class="post-date">April 21, 2025</span>
-                        <h3><a href="#">Issuance of a Royal Decree Granting the Company a Class One License</a></h3>
-                        <p>A Royal Decree (2025/40) has been issued granting Satellite Communications Technologies...</p>
-                        <a href="#" class="read-more">Read more</a>
-                    </div>
-                </article>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
+    <!-- Promise Section -->
+    <section class="page-section promise-section">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2 class="grad">CONNECTING YOU WHEREVER</h2>
-                    <p>Space Communication Technologies LLC was established by the government of Oman with a mission of spreading the National Satellite Program initiative by building national satellite communications Infrastructure.</p>
-                    <a href="about.html" class="btn-primary">VIEW MORE DETAILS</a>
+            <div class="promise-content">
+                <h2 class="section-title" data-i18n="home.promise.title">Our promise</h2>
+                <p data-i18n="home.promise.text">StarConnect Solutions delivers Starlink high speed satellite Internet combined with three tailor made network architectures. From residential towers in Dubai Marina to isolated desert sites, we connect every unit with the same standard: reliability, performance, autonomy.</p>
+                <a href="about.html" class="btn-primary" data-i18n="common.viewmore">View more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Showcase -->
+    <section class="page-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="home.packages.title">Three packages for every ambition</h2>
+            <div class="package-grid">
+                <article class="package-card pkg-1">
+                    <span class="package-badge" data-i18n="home.pkg.badge1">Level 1</span>
+                    <div class="package-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 data-i18n="home.pkg1.title">Package 1, Essential</h3>
+                    <p class="package-tagline" data-i18n="home.pkg1.desc">CAT 6 cabling, 48 port POE switch, integrated Wi-Fi 6.</p>
+                    <ul class="package-features">
+                        <li data-i18n="home.pkg1.f1">CAT 6 cabling</li>
+                        <li data-i18n="home.pkg1.f2">48 port POE switch</li>
+                        <li data-i18n="home.pkg1.f3">Wi-Fi 6 in every unit</li>
+                        <li data-i18n="home.pkg1.f4">Local electrical source</li>
+                    </ul>
+                    <a href="services.html#pkg1" class="pkg-cta"><span data-i18n="home.pkg.cta">See details</span> <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="package-card pkg-2">
+                    <span class="package-badge" data-i18n="home.pkg.badge2">Level 2</span>
+                    <div class="package-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3 data-i18n="home.pkg2.title">Package 2, Performance</h3>
+                    <p class="package-tagline" data-i18n="home.pkg2.desc">Certified CAT 7 cabling, POE router per floor, Wi-Fi 6, 5G backup.</p>
+                    <ul class="package-features">
+                        <li data-i18n="home.pkg2.f1">Certified CAT 7 cabling</li>
+                        <li data-i18n="home.pkg2.f2">POE router per floor</li>
+                        <li data-i18n="home.pkg2.f3">Wi-Fi 6 in each unit</li>
+                        <li data-i18n="home.pkg2.f4">Integrated 5G backup</li>
+                    </ul>
+                    <a href="services.html#pkg2" class="pkg-cta"><span data-i18n="home.pkg.cta">See details</span> <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <article class="package-card pkg-3">
+                    <span class="package-badge" data-i18n="home.pkg.badge3">Level 3</span>
+                    <div class="package-icon"><i class="fa-solid fa-crown"></i></div>
+                    <h3 data-i18n="home.pkg3.title">Package 3, Premium</h3>
+                    <p class="package-tagline" data-i18n="home.pkg3.desc">Fiber optic backbone, Gigabit Ethernet, Wi-Fi 7, optional solar power.</p>
+                    <ul class="package-features">
+                        <li data-i18n="home.pkg3.f1">Fiber optic backbone</li>
+                        <li data-i18n="home.pkg3.f2">Gigabit Ethernet</li>
+                        <li data-i18n="home.pkg3.f3">New generation Wi-Fi 7</li>
+                        <li data-i18n="home.pkg3.f4">Optional solar power</li>
+                    </ul>
+                    <a href="services.html#pkg3" class="pkg-cta"><span data-i18n="home.pkg.cta">See details</span> <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Starlink Highlight -->
+    <section class="page-section bg-light">
+        <div class="container">
+            <div class="service-block">
+                <div class="service-icon">
+                    <i class="fa-solid fa-satellite-dish"></i>
                 </div>
-                <div class="about-image">
-                    <img src="assets/images/om-satellite.png" alt="OmanSat Satellite">
+                <div class="service-content">
+                    <h2 class="section-title-left" data-i18n="home.starlink.title">Starlink stability, 400 Mb per antenna</h2>
+                    <p data-i18n="home.starlink.text">Installation in 1 to 2 weeks. Immediate activation. Four antennas equal 1,600 Mb combined. Can be switched on and off in less than one hour.</p>
+                    <a href="services.html" class="btn-primary" data-i18n="home.cta">Discover our services</a>
                 </div>
             </div>
         </div>
@@ -144,28 +178,30 @@
         <div class="container">
             <div class="footer-grid four-col">
                 <div class="footer-col footer-contact">
-                    <p class="footer-company">Space Communication Technologies</p>
-                    <p>P.O Box 1795 Athaiba 130</p>
-                    <p>Phone: +968 24 968 341</p>
-                    <p>Email: info@omansat.com</p>
-                    <p>Website: www.omansat.com</p>
+                    <p class="footer-company" data-i18n="footer.company">StarConnect Solutions</p>
+                    <p data-i18n="footer.ceo">Stephane Carle, CEO</p>
+                    <p data-i18n="footer.phone">Phone: +971 55 224 0899</p>
+                    <p data-i18n="footer.email">Email: carle@orange.fr</p>
+                    <a href="https://wa.me/971552240899" class="whatsapp-link"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.whatsapp">WhatsApp</span></a>
+                    <div class="footer-qr">
+                        <img src="assets/images/qrcode.png" alt="QR Code WhatsApp">
+                    </div>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Who we are</a></li>
-                        <li><a href="about.html#vision"><i class="fa-solid fa-chevron-right"></i> Vision</a></li>
-                        <li><a href="about.html#mission"><i class="fa-solid fa-chevron-right"></i> Mission</a></li>
-                        <li><a href="about.html#values"><i class="fa-solid fa-chevron-right"></i> Values</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.whoweare">Who we are</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.vision">Vision</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mission">Mission</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.values">Values</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="highlights.html"><i class="fa-solid fa-chevron-right"></i> Highlights</a></li>
-                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services &amp; Products</a></li>
-                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact US</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> T&amp;Cs</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Data Privacy Policy</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.services">Services & Products</span></a></li>
+                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.careers">Careers</span></a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.terms">Terms & Conditions</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -178,11 +214,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2020. All rights reserved to Space Communication Technologies</p>
+                <p data-i18n="footer.copyright">Copyright 2026. All rights reserved to StarConnect Solutions</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="i18n.js?v=5"></script>
+    <script src="i18n-extra.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

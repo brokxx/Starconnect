@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers – Space Communication Technologies</title>
+    <title>Careers — StarConnect Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title-key="careers.title">
 
-    <!-- Space Background -->
     <div class="space-bg">
         <div class="stars-small"></div>
         <div class="stars-medium"></div>
         <div class="stars-large"></div>
     </div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Space Communication Technologies">
+                    <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions">
                 </a>
                 <nav class="main-nav">
                     <button class="mobile-toggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li class="has-dropdown">
-                            <a href="highlights.html">HIGHLIGHTS</a>
-                            <ul class="dropdown">
-                                <li><a href="highlights.html">Updates</a></li>
-                                <li><a href="highlights.html#announcements">Announcements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">SERVICES &amp; PRODUCTS</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html#interim">Interim Solution</a></li>
-                                <li><a href="services.html#omansat1">Omansat-1 Project</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="tenders.html">TENDERS</a></li>
-                        <li class="active"><a href="careers.html">CAREERS</a></li>
-                        <li><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="tenders.html" data-i18n="nav.tenders">Tenders</a></li>
+                        <li class="active"><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li class="has-dropdown lang-dropdown">
                             <a href="#" class="lang-toggle"><i class="fa-solid fa-globe"></i></a>
                             <ul class="dropdown lang-menu">
-                                <li><a href="#" class="lang-option active"><span class="flag flag-fr"></span> FR</a></li>
-                                <li><a href="#" class="lang-option"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="en"><span class="flag flag-gb"></span> EN</a></li>
+                                <li><a href="#" class="lang-option" data-lang="fr"><span class="flag flag-fr"></span> FR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="ar"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="bn"><span class="flag flag-bd"></span> BN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,62 +51,81 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background-image: url('assets/images/sub-header-bg.jpg')">
+    <section class="page-banner" style="background-image: url('assets/images/artemis-earth.jpg')">
         <div class="banner-overlay">
             <div class="container">
-                <h1>Careers</h1>
+                <h1 data-i18n="careers.title">Careers</h1>
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a> <span>/</span> <span>Careers</span>
+                    <a href="index.html" data-i18n="nav.home">Home</a> <span>/</span> <span data-i18n="careers.title">Careers</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Careers Content -->
     <section class="page-section">
         <div class="container">
             <div class="careers-content">
-                <h2 class="section-title">Join Our Talent Pool</h2>
-                <div class="careers-text">
-                    <p>At Space Communication Technologies, we are always on the lookout for exceptional talent. While we do not have any open vacancies at this time, we believe the right person always creates an opportunity.</p>
-                    <p>We are seeking individuals who are driven by purpose, passionate about technology, and ready to be part of something bigger.</p>
-                    <p>If you believe you have what it takes to contribute to Oman's national satellite program, we encourage you to submit your profile for future consideration.</p>
+                <h2 class="section-title" data-i18n="careers.heading">Join a team building the future of connectivity.</h2>
+                <p class="section-lead" data-i18n="careers.intro">StarConnect Solutions is looking for the talents who will make the difference on tomorrow's worksites. Small teams, real responsibilities, visible projects.</p>
+
+                <h3 data-i18n="careers.openings">Open positions</h3>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3 data-i18n="careers.role1.title">IT engineers</h3>
+                        <p data-i18n="careers.role1.text">Design and deployment of network solutions.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-ethernet"></i></div>
+                        <h3 data-i18n="careers.role2.title">Network engineers</h3>
+                        <p data-i18n="careers.role2.text">Architecture, cabling, certification.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                        <h3 data-i18n="careers.role3.title">Supervision</h3>
+                        <p data-i18n="careers.role3.text">Worksite management, technical coordination.</p>
+                    </div>
                 </div>
+
+                <div class="careers-slogan">
+                    <h2 class="grad" data-i18n="careers.slogan">Just be ready.</h2>
+                </div>
+
                 <div class="careers-cta">
-                    <a href="contact.html" class="btn-primary">Submit Your Profile</a>
+                    <a href="contact.html" class="btn-primary" data-i18n="careers.cta">Submit your application</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid four-col">
                 <div class="footer-col footer-contact">
-                    <p class="footer-company">Space Communication Technologies</p>
-                    <p>P.O Box 1795 Athaiba 130</p>
-                    <p>Phone: +968 24 968 341</p>
-                    <p>Email: info@omansat.com</p>
-                    <p>Website: www.omansat.com</p>
+                    <p class="footer-company" data-i18n="footer.company">StarConnect Solutions</p>
+                    <p data-i18n="footer.ceo">Stephane Carle, CEO</p>
+                    <p data-i18n="footer.phone">Phone: +971 55 224 0899</p>
+                    <p data-i18n="footer.email">Email: carle@orange.fr</p>
+                    <a href="https://wa.me/971552240899" class="whatsapp-link"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.whatsapp">WhatsApp</span></a>
+                    <div class="footer-qr">
+                        <img src="assets/images/qrcode.png" alt="QR Code WhatsApp">
+                    </div>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Who we are</a></li>
-                        <li><a href="about.html#vision"><i class="fa-solid fa-chevron-right"></i> Vision</a></li>
-                        <li><a href="about.html#mission"><i class="fa-solid fa-chevron-right"></i> Mission</a></li>
-                        <li><a href="about.html#values"><i class="fa-solid fa-chevron-right"></i> Values</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.whoweare">Who we are</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.vision">Vision</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mission">Mission</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.values">Values</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="highlights.html"><i class="fa-solid fa-chevron-right"></i> Highlights</a></li>
-                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services &amp; Products</a></li>
-                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact US</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> T&amp;Cs</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Data Privacy Policy</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.services">Services & Products</span></a></li>
+                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.careers">Careers</span></a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.terms">Terms & Conditions</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -131,11 +138,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2020. All rights reserved to Space Communication Technologies</p>
+                <p data-i18n="footer.copyright">Copyright 2026. All rights reserved to StarConnect Solutions</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="i18n.js?v=5"></script>
+    <script src="i18n-extra.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>

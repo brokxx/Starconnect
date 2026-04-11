@@ -3,58 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us – Space Communication Technologies</title>
+    <title>Contact — StarConnect Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Bengali:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page-title-key="contact.title">
 
-    <!-- Space Background -->
     <div class="space-bg">
         <div class="stars-small"></div>
         <div class="stars-medium"></div>
         <div class="stars-large"></div>
     </div>
 
-    <!-- Header -->
     <header class="main-header">
         <div class="container">
             <div class="header-inner">
                 <a href="index.html" class="logo">
-                    <img src="assets/images/logo.png" alt="Space Communication Technologies">
+                    <img src="assets/images/logo-starconnect.png" alt="StarConnect Solutions">
                 </a>
                 <nav class="main-nav">
                     <button class="mobile-toggle" aria-label="Menu">
                         <span></span><span></span><span></span>
                     </button>
                     <ul class="nav-menu">
-                        <li><a href="index.html">HOME</a></li>
-                        <li><a href="about.html">ABOUT US</a></li>
-                        <li class="has-dropdown">
-                            <a href="highlights.html">HIGHLIGHTS</a>
-                            <ul class="dropdown">
-                                <li><a href="highlights.html">Updates</a></li>
-                                <li><a href="highlights.html#announcements">Announcements</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-dropdown">
-                            <a href="services.html">SERVICES &amp; PRODUCTS</a>
-                            <ul class="dropdown">
-                                <li><a href="services.html#interim">Interim Solution</a></li>
-                                <li><a href="services.html#omansat1">Omansat-1 Project</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="tenders.html">TENDERS</a></li>
-                        <li><a href="careers.html">CAREERS</a></li>
-                        <li class="active"><a href="contact.html">CONTACT US</a></li>
+                        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">About</a></li>
+                        <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+                        <li><a href="tenders.html" data-i18n="nav.tenders">Tenders</a></li>
+                        <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+                        <li class="active"><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
                         <li class="has-dropdown lang-dropdown">
                             <a href="#" class="lang-toggle"><i class="fa-solid fa-globe"></i></a>
                             <ul class="dropdown lang-menu">
-                                <li><a href="#" class="lang-option active"><span class="flag flag-fr"></span> FR</a></li>
-                                <li><a href="#" class="lang-option"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="en"><span class="flag flag-gb"></span> EN</a></li>
+                                <li><a href="#" class="lang-option" data-lang="fr"><span class="flag flag-fr"></span> FR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="ar"><span class="flag flag-ae"></span> AR</a></li>
+                                <li><a href="#" class="lang-option" data-lang="bn"><span class="flag flag-bd"></span> BN</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -63,127 +51,110 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
-    <section class="page-banner" style="background-image: url('assets/images/sub-header-bg.jpg')">
+    <section class="page-banner" style="background-image: url('assets/images/artemis-earth.jpg')">
         <div class="banner-overlay">
             <div class="container">
-                <h1>Contact Us</h1>
+                <h1 data-i18n="contact.title">Contact</h1>
                 <div class="breadcrumb">
-                    <a href="index.html">Home</a> <span>/</span> <span>Contact Us</span>
+                    <a href="index.html" data-i18n="nav.home">Home</a> <span>/</span> <span data-i18n="contact.title">Contact</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Content -->
     <section class="page-section">
         <div class="container">
+            <h2 class="section-title" data-i18n="contact.heading">Let us talk about your project</h2>
+            <p class="section-lead" data-i18n="contact.intro">Our team answers any quote request, technical enquiry or partnership proposal.</p>
+
             <div class="contact-grid">
-                <!-- Contact Info -->
                 <div class="contact-info-block">
-                    <h2 class="section-title-left">Get in Touch</h2>
+                    <h3 data-i18n="contact.info.title">Our contacts</h3>
                     <div class="contact-details">
                         <div class="contact-detail">
                             <i class="fa-solid fa-building"></i>
                             <div>
-                                <strong>Space Communication Technologies</strong>
-                                <p>P.O. Box 1795, Al Athaiba 130</p>
+                                <strong data-i18n="footer.company">StarConnect Solutions</strong>
+                                <p>Dubai, UAE</p>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fa-solid fa-phone"></i>
                             <div>
-                                <strong>Phone</strong>
-                                <p>+968 24 968 341</p>
+                                <strong data-i18n="contact.info.phone">Phone</strong>
+                                <p>+971 55 224 0899</p>
                             </div>
                         </div>
                         <div class="contact-detail">
                             <i class="fa-solid fa-envelope"></i>
                             <div>
-                                <strong>Email</strong>
-                                <p>info@omansat.com</p>
+                                <strong data-i18n="contact.info.email">Email</strong>
+                                <p>carle@orange.fr</p>
                             </div>
                         </div>
                         <div class="contact-detail">
-                            <i class="fa-solid fa-globe"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
                             <div>
-                                <strong>Website</strong>
-                                <p>www.omansat.com</p>
+                                <strong data-i18n="contact.info.whatsapp">WhatsApp</strong>
+                                <p><a href="https://wa.me/971552240899">+971 55 224 0899</a></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div class="contact-form-block">
-                    <h2 class="section-title-left">Send an Enquiry</h2>
                     <form class="contact-form" action="#" method="post">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" placeholder="Subject">
-                            </div>
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Your name</label>
+                            <input type="text" id="name" name="name" data-i18n-attr="placeholder:contact.form.name">
                         </div>
-                        <div class="form-row two-col">
-                            <div class="form-group">
-                                <label for="name">Your Name *</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company" placeholder="Company">
-                            </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">Your email</label>
+                            <input type="email" id="email" name="email" data-i18n-attr="placeholder:contact.form.email">
                         </div>
-                        <div class="form-row two-col">
-                            <div class="form-group">
-                                <label for="contact">Contact Information</label>
-                                <input type="text" id="contact" name="contact" placeholder="Contact Information">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Your Email *</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                            </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Subject</label>
+                            <input type="text" id="subject" name="subject" data-i18n-attr="placeholder:contact.form.subject">
                         </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="enquiry">Enquiry</label>
-                                <textarea id="enquiry" name="enquiry" rows="6" placeholder="Your enquiry..."></textarea>
-                            </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Your message</label>
+                            <textarea id="message" name="message" rows="5" data-i18n-attr="placeholder:contact.form.message"></textarea>
                         </div>
-                        <button type="submit" class="btn-primary">Submit</button>
+                        <button type="submit" class="btn-primary" data-i18n="contact.form.submit">Send</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid four-col">
                 <div class="footer-col footer-contact">
-                    <p class="footer-company">Space Communication Technologies</p>
-                    <p>P.O Box 1795 Athaiba 130</p>
-                    <p>Phone: +968 24 968 341</p>
-                    <p>Email: info@omansat.com</p>
-                    <p>Website: www.omansat.com</p>
+                    <p class="footer-company" data-i18n="footer.company">StarConnect Solutions</p>
+                    <p data-i18n="footer.ceo">Stephane Carle, CEO</p>
+                    <p data-i18n="footer.phone">Phone: +971 55 224 0899</p>
+                    <p data-i18n="footer.email">Email: carle@orange.fr</p>
+                    <a href="https://wa.me/971552240899" class="whatsapp-link"><i class="fa-brands fa-whatsapp"></i> <span data-i18n="footer.whatsapp">WhatsApp</span></a>
+                    <div class="footer-qr">
+                        <img src="assets/images/qrcode.png" alt="QR Code WhatsApp">
+                    </div>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Who we are</a></li>
-                        <li><a href="about.html#vision"><i class="fa-solid fa-chevron-right"></i> Vision</a></li>
-                        <li><a href="about.html#mission"><i class="fa-solid fa-chevron-right"></i> Mission</a></li>
-                        <li><a href="about.html#values"><i class="fa-solid fa-chevron-right"></i> Values</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.whoweare">Who we are</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.vision">Vision</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.mission">Mission</span></a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.values">Values</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <ul>
-                        <li><a href="highlights.html"><i class="fa-solid fa-chevron-right"></i> Highlights</a></li>
-                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services &amp; Products</a></li>
-                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> Careers</a></li>
-                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact US</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> T&amp;Cs</a></li>
-                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> Data Privacy Policy</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.services">Services & Products</span></a></li>
+                        <li><a href="careers.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.careers">Careers</span></a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.contact">Contact</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.terms">Terms & Conditions</span></a></li>
+                        <li><a href="#"><i class="fa-solid fa-chevron-right"></i> <span data-i18n="footer.privacy">Privacy Policy</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -196,11 +167,13 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>Copyright 2020. All rights reserved to Space Communication Technologies</p>
+                <p data-i18n="footer.copyright">Copyright 2026. All rights reserved to StarConnect Solutions</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="i18n.js?v=5"></script>
+    <script src="i18n-extra.js?v=5"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
