@@ -1007,6 +1007,11 @@ html[dir="rtl"] .footer-col ul li a i.fa-chevron-right::before { content: "\f053
         background: rgba(var(--accent-rgb), 0.05);
     }
 
+    /* Kill the desktop hover underline on mobile (was overlapping text) */
+    .nav-menu > li > a::before {
+        display: none !important;
+    }
+
     /* Dropdowns in sidenav */
     .dropdown {
         position: static;

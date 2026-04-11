@@ -82,8 +82,7 @@
         toggle.classList.remove('active');
         overlay.classList.remove('active');
         document.body.style.overflow = '';
-        // Close any open submenus
-        menu.querySelectorAll('.has-dropdown.sub-open').forEach(function(el) {
+        menu.querySelectorAll('.sub-open').forEach(function(el) {
             el.classList.remove('sub-open');
         });
     }
@@ -92,53 +91,27 @@
     toggle.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
-        menu.classList.contains('open') ? closeNav() : openNav();
+        if (menu.classList.contains('open')) {
+            closeNav();
+        } else {
+            openNav();
+        }
     });
 
     // Close on overlay tap
     overlay.addEventListener('click', closeNav);
 
-    // Event delegation for all menu interactions (more reliable on mobile)
-    menu.addEventListener('click', function(e) {
-        var link = e.target.closest('a');
-        if (!link) return;
-
-        // Language option: let i18n handle it, close nav on mobile
-        if (link.classList.contains('lang-option')) {
-            if (isMobile()) {
-                setTimeout(closeNav, 50);
-            }
-            return;
-        }
-
-        // Lang toggle (globe): open/close submenu, prevent navigation
-        if (link.classList.contains('lang-toggle')) {
+    // ONLY intercept lang-toggle (globe icon). Everything else navigates naturally.
+    // The nav auto-resets to closed state on each new page load.
+    var langToggle = menu.querySelector('.lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            var langParent = link.parentElement;
-            langParent.classList.toggle('sub-open');
-            return;
-        }
-
-        // Dropdown parent link: on mobile, toggle submenu instead of navigating
-        var parentLi = link.parentElement;
-        if (parentLi && parentLi.classList.contains('has-dropdown') && isMobile()) {
-            // The <a> is the direct child of .has-dropdown <li>
-            if (link.parentElement === parentLi && parentLi.querySelector('ul.dropdown')) {
-                e.preventDefault();
-                menu.querySelectorAll('.has-dropdown.sub-open').forEach(function(el) {
-                    if (el !== parentLi) el.classList.remove('sub-open');
-                });
-                parentLi.classList.toggle('sub-open');
-                return;
-            }
-        }
-
-        // Regular nav link: close nav on mobile, let browser navigate
-        if (isMobile()) {
-            // Defer close so click has time to register and navigation starts
-            setTimeout(closeNav, 30);
-        }
-    });
+            e.stopPropagation();
+            var parent = langToggle.parentElement;
+            parent.classList.toggle('sub-open');
+        });
+    }
 
     // Reset on resize to desktop
     window.addEventListener('resize', function() {
