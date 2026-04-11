@@ -987,15 +987,24 @@ html[dir="rtl"] .footer-col ul li a i.fa-chevron-right::before { content: "\f053
     }
 
     .nav-menu > li > a {
-        padding: 14px 25px;
+        display: block;
+        padding: 16px 28px;
         font-size: 14px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         letter-spacing: 1px;
+        position: relative;
+        color: #fff;
     }
 
     .nav-menu > li.active > a {
-        background: rgba(var(--accent-rgb), 0.08);
-        border-right: 3px solid var(--accent);
+        background: rgba(var(--accent-rgb), 0.1);
+        color: var(--accent-hover);
+        box-shadow: inset 3px 0 0 var(--accent);
+    }
+
+    .nav-menu > li > a:active,
+    .nav-menu > li > a:hover {
+        background: rgba(var(--accent-rgb), 0.05);
     }
 
     /* Dropdowns in sidenav */
