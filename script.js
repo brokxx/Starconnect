@@ -167,14 +167,18 @@
         }, 700);
     }
 
+    // Shorter preloader on mobile (1.2s vs 2.4s on desktop)
+    var delay = window.innerWidth < 779 ? 1200 : 2400;
+    var fallback = window.innerWidth < 779 ? 2500 : 4500;
+
     if (document.readyState === 'complete') {
-        setTimeout(hide, 2400);
+        setTimeout(hide, delay);
     } else {
         window.addEventListener('load', function() {
-            setTimeout(hide, 2400);
+            setTimeout(hide, delay);
         });
         // Safety fallback if load never fires
-        setTimeout(hide, 4500);
+        setTimeout(hide, fallback);
     }
 })();
 
@@ -259,9 +263,12 @@
     });
 })();
 
-// ===== HERO PARALLAX (home only) =====
+// ===== HERO PARALLAX (home only, desktop only) =====
 (function() {
     if (!document.body.classList.contains('home')) return;
+    // Disable on mobile/tablet: scroll listener and per-frame transforms
+    // tank performance and aren't worth it on touch devices.
+    if (window.innerWidth < 779) return;
     var slide = document.querySelector('.hero-slider .slide');
     var heroContent = document.querySelector('.hero-content');
     if (!slide) return;
