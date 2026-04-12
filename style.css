@@ -2301,11 +2301,107 @@ html[lang="bn"] .pillar-card h3 {
     margin-bottom: 25px;
 }
 
-.promise-content p {
+.promise-lead {
     color: #b8c5d6;
-    font-size: 1.05rem;
-    line-height: 1.75;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+.promise-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.promise-pillar {
+    text-align: center;
+    padding: 35px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    background: rgba(10, 14, 23, 0.4);
+    transition: border-color 0.35s ease, transform 0.35s ease;
+}
+
+.promise-pillar:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-4px);
+}
+
+.promise-pillar-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(59, 130, 246, 0.06);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--accent);
+    transition: box-shadow 0.35s ease;
+}
+
+.promise-pillar:hover .promise-pillar-icon {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.2), 0 0 50px rgba(59, 130, 246, 0.1);
+}
+
+.promise-pillar-icon svg {
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* Fiabilite: horloge tourne */
+.promise-pillar:nth-child(1):hover .promise-pillar-icon svg {
+    transform: rotate(360deg);
+}
+
+/* Performance: graphe monte */
+.promise-pillar:nth-child(2):hover .promise-pillar-icon svg {
+    transform: scale(1.2) translateY(-3px);
+}
+
+/* Autonomie: soleil pulse */
+.promise-pillar:nth-child(3):hover .promise-pillar-icon svg {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+}
+
+.promise-pillar h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.promise-pillar p {
+    color: #9aa8b8;
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+.promise-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .promise-pillars {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .promise-pillar {
+        padding: 25px 18px;
+    }
+
+    .promise-cta {
+        margin-top: 35px;
+    }
 }
 
 /* Building image: portrait format, fill container cleanly */
@@ -3310,6 +3406,53 @@ body {
     background: rgba(59, 130, 246, 0.08);
     border: 1px solid rgba(59, 130, 246, 0.18);
     color: var(--accent);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-item:hover .why-icon {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.why-icon svg {
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.why-item:hover .why-icon svg {
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* Pillar icons (about page) animate on hover */
+.pillar-icon svg,
+.pillar-icon i {
+    transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.pillar-card:hover .pillar-icon svg,
+.pillar-card:hover .pillar-icon i {
+    transform: scale(1.2) rotate(-8deg);
+}
+
+/* Package icon cards (services) animate on hover */
+.package-icon-card svg,
+.package-icon-card i {
+    transition: transform 0.4s ease;
+}
+
+.package-icon-card:hover svg,
+.package-icon-card:hover i {
+    transform: scale(1.15) translateY(-2px);
+}
+
+/* Stat card icons animate on hover */
+.stat-card-icon svg,
+.stat-card-icon i {
+    transition: transform 0.4s ease;
+}
+
+.stat-card:hover .stat-card-icon svg,
+.stat-card:hover .stat-card-icon i {
+    transform: scale(1.15);
 }
 
 .why-text h3 {
