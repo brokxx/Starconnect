@@ -3363,10 +3363,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* Pause on hover */
-.shiny-text:hover {
-    animation-play-state: paused;
-}
 
 /* Disable on reduced motion */
 @media (prefers-reduced-motion: reduce) {
