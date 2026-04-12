@@ -3141,8 +3141,9 @@ body {
     color: inherit;
 }
 
-/* ===== BORDER GLOW (package cards, inspired by ReactBits) ===== */
-.package-card {
+/* ===== BORDER GLOW (package cards + showcase panels, inspired by ReactBits) ===== */
+.package-card,
+.package-showcase-visual {
     --edge-proximity: 0;
     --cursor-angle: 45deg;
     --edge-sensitivity: 30;
@@ -3154,7 +3155,7 @@ body {
     overflow: visible;
 }
 
-/* Glow color vars per package */
+/* Glow color vars per package (cards on home) */
 .package-card.pkg-1 {
     --glow-h: 199; --glow-s: 92%; --glow-l: 64%;
     --glow-c1: #4fc3f7; --glow-c2: #38bdf8; --glow-c3: #7dd3fc;
@@ -3168,20 +3169,39 @@ body {
     --glow-c1: #ffb74d; --glow-c2: #fbbf24; --glow-c3: #f59e0b;
 }
 
+/* Glow color vars per package (showcase panels on services/careers) */
+.package-showcase.pkg-1 .package-showcase-visual {
+    --glow-h: 199; --glow-s: 92%; --glow-l: 64%;
+    --glow-c1: #4fc3f7; --glow-c2: #38bdf8; --glow-c3: #7dd3fc;
+}
+.package-showcase.pkg-2 .package-showcase-visual {
+    --glow-h: 262; --glow-s: 47%; --glow-l: 63%;
+    --glow-c1: #9575cd; --glow-c2: #c084fc; --glow-c3: #a78bfa;
+}
+.package-showcase.pkg-3 .package-showcase-visual {
+    --glow-h: 33; --glow-s: 100%; --glow-l: 65%;
+    --glow-c1: #ffb74d; --glow-c2: #fbbf24; --glow-c3: #f59e0b;
+}
+
 /* Glow opacity calc helper */
 .package-card::before,
-.package-card > .edge-light {
+.package-card > .edge-light,
+.package-showcase-visual::before,
+.package-showcase-visual > .edge-light {
     transition: opacity 0.25s ease-out;
 }
 
 .package-card:not(:hover)::before,
-.package-card:not(:hover) > .edge-light {
+.package-card:not(:hover) > .edge-light,
+.package-showcase-visual:not(:hover)::before,
+.package-showcase-visual:not(:hover) > .edge-light {
     opacity: 0 !important;
     transition: opacity 0.6s ease-in-out;
 }
 
 /* Colored gradient border on hover */
-.package-card::before {
+.package-card::before,
+.package-showcase-visual::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -3210,7 +3230,8 @@ body {
 }
 
 /* Outer glow layer */
-.package-card > .edge-light {
+.package-card > .edge-light,
+.package-showcase-visual > .edge-light {
     position: absolute;
     inset: calc(var(--glow-padding) * -1);
     border-radius: inherit;
@@ -3225,7 +3246,8 @@ body {
     mix-blend-mode: plus-lighter;
 }
 
-.package-card > .edge-light::before {
+.package-card > .edge-light::before,
+.package-showcase-visual > .edge-light::before {
     content: "";
     position: absolute;
     inset: var(--glow-padding);
@@ -3249,7 +3271,9 @@ body {
 /* Disable border glow on mobile (hover-only effect, GPU heavy) */
 @media (hover: none) {
     .package-card > .edge-light,
-    .package-card::before {
+    .package-card::before,
+    .package-showcase-visual > .edge-light,
+    .package-showcase-visual::before {
         display: none;
     }
 }

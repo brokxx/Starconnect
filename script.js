@@ -181,9 +181,9 @@
     }
 })();
 
-// ===== BORDER GLOW (package cards) =====
+// ===== BORDER GLOW (package cards + showcase panels) =====
 (function() {
-    var cards = document.querySelectorAll('.package-card');
+    var cards = document.querySelectorAll('.package-card, .package-showcase-visual');
     if (!cards.length) return;
     // Skip on touch devices
     if (!window.matchMedia('(hover: hover)').matches) return;
