@@ -2356,15 +2356,79 @@ html[lang="bn"] .pillar-card h3 {
     transform: rotate(360deg);
 }
 
-/* Performance: graphe monte */
-.promise-pillar:nth-child(2):hover .promise-pillar-icon svg {
-    transform: scale(1.2) translateY(-3px);
+/* Performance: graphe se dessine (stroke-dashoffset) */
+.promise-pillar:nth-child(2) .promise-pillar-icon svg path,
+.promise-pillar:nth-child(2) .promise-pillar-icon svg line {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.6s ease;
+}
+.promise-pillar:nth-child(2):hover .promise-pillar-icon svg path,
+.promise-pillar:nth-child(2):hover .promise-pillar-icon svg line {
+    stroke-dashoffset: 100;
+    animation: svg-draw 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
 }
 
-/* Autonomie: soleil pulse */
+/* Autonomie: soleil rayonne (se dessine + pulse) */
+.promise-pillar:nth-child(3) .promise-pillar-icon svg circle,
+.promise-pillar:nth-child(3) .promise-pillar-icon svg path {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.5s ease;
+}
+.promise-pillar:nth-child(3):hover .promise-pillar-icon svg circle,
+.promise-pillar:nth-child(3):hover .promise-pillar-icon svg path {
+    stroke-dashoffset: 80;
+    animation: svg-draw 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
 .promise-pillar:nth-child(3):hover .promise-pillar-icon svg {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+}
+
+/* SVG draw keyframes */
+@keyframes svg-draw {
+    0% { stroke-dashoffset: 100; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Why-list: SVG se dessine au hover */
+.why-icon svg path,
+.why-icon svg circle,
+.why-icon svg rect,
+.why-icon svg line {
+    stroke-dasharray: 120;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 0.3s ease;
+}
+.why-item:hover .why-icon svg path,
+.why-item:hover .why-icon svg circle,
+.why-item:hover .why-icon svg rect,
+.why-item:hover .why-icon svg line {
+    animation: svg-draw-long 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    stroke-dashoffset: 120;
+}
+
+@keyframes svg-draw-long {
+    0% { stroke-dashoffset: 120; }
+    100% { stroke-dashoffset: 0; }
+}
+
+/* Pillar cards (about): SVG assemble au hover */
+.pillar-card .pillar-icon svg path,
+.pillar-card .pillar-icon svg circle,
+.pillar-card .pillar-icon svg rect {
+    transition: opacity 0.3s ease, transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.pillar-card:hover .pillar-icon svg path,
+.pillar-card:hover .pillar-icon svg circle,
+.pillar-card:hover .pillar-icon svg rect {
+    animation: svg-assemble 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes svg-assemble {
+    0% { opacity: 0; transform: scale(0.5) translateY(5px); }
+    50% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .promise-pillar h3 {
@@ -3414,8 +3478,9 @@ body {
     transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
+/* transform kept simple since draw animation handles the visual */
 .why-item:hover .why-icon svg {
-    transform: scale(1.15) rotate(5deg);
+    transform: scale(1.05);
 }
 
 /* Pillar icons (about page) animate on hover */
@@ -3424,9 +3489,9 @@ body {
     transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-.pillar-card:hover .pillar-icon svg,
+/* assemble animation handles the effect, keep subtle scale on i (font awesome) */
 .pillar-card:hover .pillar-icon i {
-    transform: scale(1.2) rotate(-8deg);
+    transform: scale(1.15);
 }
 
 /* Package icon cards (services) animate on hover */
