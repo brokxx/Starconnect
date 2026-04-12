@@ -181,6 +181,21 @@
     }
 })();
 
+// ===== SHINY TEXT (section titles) =====
+(function() {
+    var selectors = [
+        '.section-title',
+        '.starlink-hero-title',
+        '.package-showcase-title',
+        '.careers-slogan .grad'
+    ];
+    selectors.forEach(function(sel) {
+        document.querySelectorAll(sel).forEach(function(el) {
+            el.classList.add('shiny-text');
+        });
+    });
+})();
+
 // ===== BORDER GLOW (package cards + showcase panels) =====
 (function() {
     var cards = document.querySelectorAll('.package-card, .package-showcase-visual');
