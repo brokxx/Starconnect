@@ -3141,6 +3141,119 @@ body {
     color: inherit;
 }
 
+/* ===== BORDER GLOW (package cards, inspired by ReactBits) ===== */
+.package-card {
+    --edge-proximity: 0;
+    --cursor-angle: 45deg;
+    --edge-sensitivity: 30;
+    --color-sensitivity: calc(var(--edge-sensitivity) + 20);
+    --glow-padding: 44px;
+    --cone-spread: 25;
+    isolation: isolate;
+    transform: translate3d(0, 0, 0.01px);
+    overflow: visible;
+}
+
+/* Glow color vars per package */
+.package-card.pkg-1 {
+    --glow-h: 199; --glow-s: 92%; --glow-l: 64%;
+    --glow-c1: #4fc3f7; --glow-c2: #38bdf8; --glow-c3: #7dd3fc;
+}
+.package-card.pkg-2 {
+    --glow-h: 262; --glow-s: 47%; --glow-l: 63%;
+    --glow-c1: #9575cd; --glow-c2: #c084fc; --glow-c3: #a78bfa;
+}
+.package-card.pkg-3 {
+    --glow-h: 33; --glow-s: 100%; --glow-l: 65%;
+    --glow-c1: #ffb74d; --glow-c2: #fbbf24; --glow-c3: #f59e0b;
+}
+
+/* Glow opacity calc helper */
+.package-card::before,
+.package-card > .edge-light {
+    transition: opacity 0.25s ease-out;
+}
+
+.package-card:not(:hover)::before,
+.package-card:not(:hover) > .edge-light {
+    opacity: 0 !important;
+    transition: opacity 0.6s ease-in-out;
+}
+
+/* Colored gradient border on hover */
+.package-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--card-bg, #0a0e17) 0 100%) padding-box,
+        linear-gradient(rgb(255 255 255 / 0%) 0 100%) border-box,
+        radial-gradient(at 80% 55%, var(--glow-c1) 0px, transparent 50%) border-box,
+        radial-gradient(at 69% 34%, var(--glow-c2) 0px, transparent 50%) border-box,
+        radial-gradient(at 8% 6%, var(--glow-c3) 0px, transparent 50%) border-box,
+        radial-gradient(at 41% 38%, var(--glow-c1) 0px, transparent 50%) border-box,
+        radial-gradient(at 86% 85%, var(--glow-c2) 0px, transparent 50%) border-box,
+        radial-gradient(at 51% 4%, var(--glow-c3) 0px, transparent 50%) border-box,
+        linear-gradient(var(--glow-c1) 0 100%) border-box;
+    opacity: calc((var(--edge-proximity) - var(--color-sensitivity)) / (100 - var(--color-sensitivity)));
+    mask-image:
+        conic-gradient(
+            from var(--cursor-angle) at center,
+            black calc(var(--cone-spread) * 1%),
+            transparent calc((var(--cone-spread) + 15) * 1%),
+            transparent calc((100 - var(--cone-spread) - 15) * 1%),
+            black calc((100 - var(--cone-spread)) * 1%)
+        );
+}
+
+/* Outer glow layer */
+.package-card > .edge-light {
+    position: absolute;
+    inset: calc(var(--glow-padding) * -1);
+    border-radius: inherit;
+    pointer-events: none;
+    z-index: 1;
+    mask-image:
+        conic-gradient(
+            from var(--cursor-angle) at center,
+            black 2.5%, transparent 10%, transparent 90%, black 97.5%
+        );
+    opacity: calc((var(--edge-proximity) - var(--edge-sensitivity)) / (100 - var(--edge-sensitivity)));
+    mix-blend-mode: plus-lighter;
+}
+
+.package-card > .edge-light::before {
+    content: "";
+    position: absolute;
+    inset: var(--glow-padding);
+    border-radius: inherit;
+    box-shadow:
+        inset 0 0 0 1px hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 100%),
+        inset 0 0 1px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 60%),
+        inset 0 0 3px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 50%),
+        inset 0 0 6px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 40%),
+        inset 0 0 15px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 30%),
+        inset 0 0 25px 2px hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 20%),
+        inset 0 0 50px 2px hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 10%),
+        0 0 1px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 60%),
+        0 0 3px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 50%),
+        0 0 6px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 40%),
+        0 0 15px 0 hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 30%),
+        0 0 25px 2px hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 20%),
+        0 0 50px 2px hsl(var(--glow-h) var(--glow-s) var(--glow-l) / 10%);
+}
+
+/* Disable border glow on mobile (hover-only effect, GPU heavy) */
+@media (hover: none) {
+    .package-card > .edge-light,
+    .package-card::before {
+        display: none;
+    }
+}
+
 /* Job listing h4 subtitles */
 .package-showcase-content h4 {
     font-family: 'Montserrat', sans-serif;

@@ -181,6 +181,49 @@
     }
 })();
 
+// ===== BORDER GLOW (package cards) =====
+(function() {
+    var cards = document.querySelectorAll('.package-card');
+    if (!cards.length) return;
+    // Skip on touch devices
+    if (!window.matchMedia('(hover: hover)').matches) return;
+
+    function getCenter(el) {
+        var r = el.getBoundingClientRect();
+        return [r.width / 2, r.height / 2];
+    }
+
+    function getEdgeProximity(el, x, y) {
+        var c = getCenter(el);
+        var dx = x - c[0];
+        var dy = y - c[1];
+        var kx = dx !== 0 ? c[0] / Math.abs(dx) : Infinity;
+        var ky = dy !== 0 ? c[1] / Math.abs(dy) : Infinity;
+        return Math.min(Math.max(1 / Math.min(kx, ky), 0), 1);
+    }
+
+    function getCursorAngle(el, x, y) {
+        var c = getCenter(el);
+        var dx = x - c[0];
+        var dy = y - c[1];
+        if (dx === 0 && dy === 0) return 0;
+        var deg = Math.atan2(dy, dx) * (180 / Math.PI) + 90;
+        return deg < 0 ? deg + 360 : deg;
+    }
+
+    cards.forEach(function(card) {
+        card.addEventListener('pointermove', function(e) {
+            var rect = card.getBoundingClientRect();
+            var x = e.clientX - rect.left;
+            var y = e.clientY - rect.top;
+            var edge = getEdgeProximity(card, x, y);
+            var angle = getCursorAngle(card, x, y);
+            card.style.setProperty('--edge-proximity', (edge * 100).toFixed(2));
+            card.style.setProperty('--cursor-angle', angle.toFixed(2) + 'deg');
+        });
+    });
+})();
+
 // ===== SCROLL REVEAL ANIMATIONS =====
 (function() {
     // Elements that reveal themselves (single element animations)
