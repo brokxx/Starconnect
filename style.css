@@ -2800,16 +2800,13 @@ html[lang="bn"] .pillar-card h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: #fff;
     line-height: 1.1;
     margin-bottom: 6px;
 }
 
 .stat-card-label {
-    color: var(--text-muted);
+    color: #b8c5d6;
     font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
