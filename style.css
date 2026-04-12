@@ -3071,6 +3071,69 @@ body {
     margin-bottom: 30px;
 }
 
+/* Why join us list (careers) */
+.why-list {
+    max-width: 750px;
+    margin: 40px auto 0 auto;
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.why-item:last-child {
+    border-bottom: none;
+}
+
+.why-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.18);
+    color: var(--accent);
+}
+
+.why-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.why-text p {
+    color: #b8c5d6;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+@media (max-width: 500px) {
+    .why-item {
+        gap: 18px;
+        padding: 22px 0;
+    }
+
+    .why-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .why-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
 /* SVG icons in pillar-icon and stat-card-icon */
 .pillar-icon svg,
 .stat-card-icon svg,
