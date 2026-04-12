@@ -3253,6 +3253,11 @@ body {
     background-image: linear-gradient(120deg, var(--accent) 0%, var(--accent) 35%, #fff 50%, var(--accent) 65%, var(--accent) 100%);
 }
 
+.hero-content h1.shiny-text {
+    background-image: linear-gradient(120deg, #fff 0%, #fff 35%, var(--accent-hover) 50%, #fff 65%, #fff 100%);
+    animation-duration: 4s;
+}
+
 .package-showcase-title.shiny-text {
     background-image: linear-gradient(120deg, var(--pkg-accent, #fff) 0%, var(--pkg-accent, #fff) 35%, #fff 50%, var(--pkg-accent, #fff) 65%, var(--pkg-accent, #fff) 100%);
 }

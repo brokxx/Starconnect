@@ -187,7 +187,8 @@
         '.section-title',
         '.starlink-hero-title',
         '.package-showcase-title',
-        '.careers-slogan .grad'
+        '.careers-slogan .grad',
+        '.hero-content h1'
     ];
     selectors.forEach(function(sel) {
         document.querySelectorAll(sel).forEach(function(el) {
