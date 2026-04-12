@@ -3030,6 +3030,24 @@ body {
     }
 }
 
+/* SVG icons in pillar-icon and stat-card-icon */
+.pillar-icon svg,
+.stat-card-icon svg,
+.package-icon-card svg {
+    color: inherit;
+}
+
+/* Job listing h4 subtitles */
+.package-showcase-content h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+
 /* Extra-small phones */
 @media (max-width: 400px) {
     .hero-content h1 {
