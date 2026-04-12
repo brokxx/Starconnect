@@ -2104,6 +2104,14 @@ html[dir="rtl"] .package-number {
         grid-template-columns: 1fr;
     }
 
+    .contact-grid .contact-info-block {
+        order: 2;
+    }
+
+    .contact-grid .contact-form-block {
+        order: 1;
+    }
+
     .form-row.two-col {
         grid-template-columns: 1fr;
     }
