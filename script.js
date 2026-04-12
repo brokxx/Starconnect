@@ -167,9 +167,8 @@
         }, 700);
     }
 
-    // Shorter preloader on mobile (1.2s vs 2.4s on desktop)
-    var delay = window.innerWidth < 779 ? 1200 : 2400;
-    var fallback = window.innerWidth < 779 ? 2500 : 4500;
+    var delay = 2400;
+    var fallback = 4500;
 
     if (document.readyState === 'complete') {
         setTimeout(hide, delay);

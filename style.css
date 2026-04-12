@@ -3001,11 +3001,7 @@ body {
         transition-delay: 0s !important;
     }
 
-    /* Preloader shorter on mobile */
-    .preloader-core {
-        animation-duration: 0.7s;
-        animation-delay: 0.4s;
-    }
+    /* Preloader same timing as desktop */
 
     /* Simpler transitions on cards */
     .package-card,
