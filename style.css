@@ -2604,12 +2604,24 @@ html[lang="bn"] .pillar-card h3 {
 
 .package-card:hover::before { height: 6px; }
 
-.package-card.pkg-1::before { background: var(--border); }
-.package-card.pkg-2::before { background: rgba(var(--accent-rgb), 0.5); }
-.package-card.pkg-3::before { background: var(--accent); }
-.package-card.pkg-3 {
-    box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.2);
+/* Per-package accent color overrides (same as services/careers) */
+.package-card.pkg-1 {
+    --accent: #4fc3f7;
+    --accent-rgb: 79, 195, 247;
 }
+.package-card.pkg-2 {
+    --accent: #9575cd;
+    --accent-rgb: 149, 117, 205;
+}
+.package-card.pkg-3 {
+    --accent: #ffb74d;
+    --accent-rgb: 255, 183, 77;
+    box-shadow: 0 0 0 1px rgba(255, 183, 77, 0.2);
+}
+
+.package-card.pkg-1::before { background: #4fc3f7; }
+.package-card.pkg-2::before { background: #9575cd; }
+.package-card.pkg-3::before { background: #ffb74d; }
 
 .package-badge {
     display: inline-block;
