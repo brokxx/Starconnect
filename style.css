@@ -2164,6 +2164,10 @@ html[dir="rtl"] .package-number {
 .hero-content h1 span {
     display: block;
     white-space: nowrap;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-content p {
