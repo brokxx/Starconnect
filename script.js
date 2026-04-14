@@ -181,6 +181,30 @@
     }
 })();
 
+// ===== MOBILE PACKAGES ACCORDION =====
+(function() {
+    var cards = document.querySelectorAll('.package-grid .package-card');
+    if (!cards.length) return;
+
+    function isMobile() { return window.innerWidth <= 778; }
+
+    cards.forEach(function(card, idx) {
+        card.addEventListener('click', function(e) {
+            if (!isMobile()) return;
+            // Don't toggle if a link inside was clicked
+            if (e.target.closest('a')) return;
+            // Close others
+            cards.forEach(function(c) { if (c !== card) c.classList.remove('pkg-open'); });
+            card.classList.toggle('pkg-open');
+        });
+    });
+
+    // Open first by default on mobile
+    if (isMobile() && cards[0]) {
+        cards[0].classList.add('pkg-open');
+    }
+})();
+
 // ===== MOBILE LANG SWITCHER =====
 (function() {
     var wrapper = document.querySelector('.mobile-lang');

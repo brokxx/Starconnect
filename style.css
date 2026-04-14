@@ -3797,34 +3797,102 @@ body {
     }
 }
 
-/* ===== MOBILE: packages as horizontal carousel ===== */
+/* ===== MOBILE: packages as accordion ===== */
 @media (max-width: 778px) {
     .package-grid {
         display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        gap: 16px;
-        padding: 20px 18px 10px 18px;
-        margin: 30px -18px 0 -18px;
-        scroll-padding: 0 18px;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 30px;
     }
-    .package-grid::-webkit-scrollbar { display: none; }
 
+    /* Card becomes accordion container */
     .package-card {
-        flex: 0 0 85%;
-        scroll-snap-align: center;
-        min-width: 280px;
+        padding: 0;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+    }
+    .package-card.pkg-1.pkg-open { border-color: #4fc3f7; }
+    .package-card.pkg-2.pkg-open { border-color: #9575cd; }
+    .package-card.pkg-3.pkg-open { border-color: #ffb74d; }
+
+    /* Top colored bar stays */
+    .package-card::before { height: 4px !important; }
+
+    /* Badge = compact header always visible */
+    .package-card .package-badge {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 20px 55px 20px 22px;
+        background: transparent;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: 700;
+        text-transform: none;
+        letter-spacing: 0;
+        border-radius: 0;
+        box-shadow: none;
     }
 
-    /* Visual cue: subtle dots below (via pseudo on container) */
-    .package-grid + .package-dots {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 20px;
+    /* Chevron */
+    .package-card > h3 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 22px 22px 0 0;
+        font-size: 0;
+    }
+    .package-card > h3::after {
+        content: '\f078';
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 0.9rem;
+        color: #4fc3f7;
+        transition: transform 0.35s ease;
+        display: inline-block;
+    }
+    .package-card.pkg-2 > h3::after { color: #9575cd; }
+    .package-card.pkg-3 > h3::after { color: #ffb74d; }
+    .package-card.pkg-open > h3::after {
+        transform: rotate(180deg);
+    }
+
+    /* Hide icon on mobile accordion */
+    .package-card > .package-icon {
+        display: none;
+    }
+
+    /* Body: hidden by default via max-height */
+    .package-card .package-tagline,
+    .package-card .package-features,
+    .package-card .pkg-cta {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.25s ease, margin 0.3s ease, padding 0.3s ease;
+        margin: 0 22px;
+    }
+
+    .package-card.pkg-open .package-tagline {
+        max-height: 200px;
+        opacity: 1;
+        margin: 0 22px 14px 22px;
+    }
+
+    .package-card.pkg-open .package-features {
+        max-height: 400px;
+        opacity: 1;
+        padding-top: 14px;
+        margin: 0 22px 16px 22px;
+    }
+
+    .package-card.pkg-open .pkg-cta {
+        max-height: 50px;
+        opacity: 1;
+        margin: 0 22px 22px 22px;
+        display: inline-block;
     }
 }
 

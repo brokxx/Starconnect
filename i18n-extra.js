@@ -1,4 +1,4 @@
-// ===== STARCONNECT V2 — clés supplémentaires =====
+// ===== STARCONNECT V2 : clés supplémentaires =====
 // Étend TRANSLATIONS avec les nouvelles clés pour : hero stats, cartes packages,
 // tableau comparatif services, stats tenders, timeline, stats highlights.
 

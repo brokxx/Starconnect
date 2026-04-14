@@ -47,11 +47,11 @@ fr: {
     "home.promise.title": "Notre promesse",
     "home.promise.text": "StarConnect Solutions déploie l'Internet haut débit par satellite Starlink combiné à trois architectures réseau sur mesure. Des immeubles résidentiels de Dubai Marina aux sites isolés du désert, nous connectons chaque unité avec la même exigence : fiabilité, performance, autonomie.",
     "home.packages.title": "Trois packages pour chaque ambition",
-    "home.pkg1.title": "Package 1 — Essentiel",
+    "home.pkg1.title": "Package 1 : Essentiel",
     "home.pkg1.desc": "Câblage CAT 6, switch POE 48 ports, Wi-Fi 6 intégré.",
-    "home.pkg2.title": "Package 2 — Performance",
+    "home.pkg2.title": "Package 2 : Performance",
     "home.pkg2.desc": "Câblage CAT 7 certifié, routeur POE par étage, Wi-Fi 6, secours 5G.",
-    "home.pkg3.title": "Package 3 — Premium",
+    "home.pkg3.title": "Package 3 : Premium",
     "home.pkg3.desc": "Backbone fibre optique, Ethernet Gigabit, Wi-Fi 7, énergie solaire en option.",
     "home.starlink.title": "La stabilité Starlink, 400 Mb par antenne",
     "home.starlink.text": "Installation en 1 à 2 semaines. Activation immédiate. Quatre antennes égalent 1 600 Mb cumulés. Activable et désactivable en moins d'une heure.",
@@ -73,19 +73,19 @@ fr: {
     // SERVICES
     "services.title": "Services & Produits",
     "services.heading": "Trois packages. Une exigence.",
-    "services.pkg1.title": "Package 1 — Essentiel",
+    "services.pkg1.title": "Package 1 : Essentiel",
     "services.pkg1.intro": "Idéal pour les immeubles qui veulent une connectivité solide et immédiate.",
     "services.pkg1.i1": "Câblage CAT 6 sur tous les niveaux",
     "services.pkg1.i2": "Switch POE 48 ports par niveau",
     "services.pkg1.i3": "Source électrique locale",
     "services.pkg1.i4": "Wi-Fi 6 POE sur RJ45 dans chaque unité",
-    "services.pkg2.title": "Package 2 — Performance",
+    "services.pkg2.title": "Package 2 : Performance",
     "services.pkg2.intro": "Pour les résidences exigeant un débit certifié et une redondance réseau.",
     "services.pkg2.i1": "Câblage CAT 7 certifié",
     "services.pkg2.i2": "Un routeur POE certifié par étage",
     "services.pkg2.i3": "Routeur Wi-Fi 6 en unité",
     "services.pkg2.i4": "Secours 5G de sécurité intégré",
-    "services.pkg3.title": "Package 3 — Premium",
+    "services.pkg3.title": "Package 3 : Premium",
     "services.pkg3.intro": "La solution ultime, pensée pour les projets haut de gamme et les sites autonomes.",
     "services.pkg3.i1": "Backbone en fibre optique",
     "services.pkg3.i2": "Réseau Ethernet Gigabit",
@@ -650,7 +650,7 @@ bn: {
         } else {
             var pageKey = document.body.getAttribute('data-page-title-key');
             if (pageKey && dict[pageKey]) {
-                document.title = dict[pageKey] + ' — StarConnect Solutions';
+                document.title = dict[pageKey] + ' : StarConnect Solutions';
             }
         }
 
