@@ -193,8 +193,6 @@
             if (!isMobile()) return;
             // Don't toggle if a link inside was clicked
             if (e.target.closest('a')) return;
-            // Close others
-            cards.forEach(function(c) { if (c !== card) c.classList.remove('pkg-open'); });
             card.classList.toggle('pkg-open');
         });
     });
