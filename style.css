@@ -3797,6 +3797,124 @@ body {
     }
 }
 
+/* ===== MOBILE: comparison table as compact matrix ===== */
+@media (max-width: 778px) {
+    .comparison-wrapper {
+        overflow: visible;
+        border: none;
+        background: transparent;
+        margin: 20px -10px 0 -10px;
+    }
+
+    .comparison-table {
+        min-width: 0;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+
+    .comparison-table thead,
+    .comparison-table tbody {
+        display: block;
+    }
+
+    .comparison-table tr {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 54px 54px 54px;
+        align-items: center;
+        gap: 4px;
+        padding: 10px 8px;
+        border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+    }
+
+    .comparison-table thead tr {
+        border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 6px 4px;
+        font-size: 0.72rem;
+        text-align: center;
+        background: transparent;
+        border: none;
+        text-transform: none;
+        letter-spacing: 0;
+    }
+
+    /* First column (Feature): left aligned, readable */
+    .comparison-table th:first-child,
+    .comparison-table td:first-child {
+        text-align: left;
+        font-size: 0.78rem;
+        color: #b8c5d6;
+        padding-left: 6px;
+        font-weight: 500;
+    }
+
+    /* Header pkg labels: hide i18n text, show short P1/P2/P3 */
+    .comparison-table thead th.pkg-col-1,
+    .comparison-table thead th.pkg-col-2,
+    .comparison-table thead th.pkg-col-3 {
+        font-size: 0;
+        border-top: none;
+    }
+
+    .comparison-table thead th.pkg-col-1::after { content: 'P1'; color: #4fc3f7; }
+    .comparison-table thead th.pkg-col-2::after { content: 'P2'; color: #9575cd; }
+    .comparison-table thead th.pkg-col-3::after { content: 'P3'; color: #ffb74d; }
+
+    .comparison-table thead th.pkg-col-1::after,
+    .comparison-table thead th.pkg-col-2::after,
+    .comparison-table thead th.pkg-col-3::after {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+    }
+
+    /* First column header label shorter on mobile */
+    .comparison-table thead th:first-child {
+        font-size: 0.62rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: #888;
+    }
+
+    /* Value cells: colored background per column */
+    .comparison-table td.value-cell {
+        color: #fff;
+        font-weight: 500;
+        padding: 8px 4px;
+        border-radius: 6px;
+        line-height: 1.3;
+    }
+
+    .comparison-table tr td.value-cell:nth-child(2) {
+        background: rgba(79, 195, 247, 0.08);
+    }
+    .comparison-table tr td.value-cell:nth-child(3) {
+        background: rgba(149, 117, 205, 0.08);
+    }
+    .comparison-table tr td.value-cell:nth-child(4) {
+        background: rgba(255, 183, 77, 0.08);
+    }
+
+    .comparison-table td.check-yes i {
+        font-size: 0.95rem;
+    }
+
+    .comparison-table td.check-no i {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.25);
+    }
+
+    .comparison-table tr:hover td {
+        background-color: transparent;
+    }
+}
+
 /* ===== MOBILE: packages as accordion ===== */
 @media (max-width: 778px) {
     .package-grid {
