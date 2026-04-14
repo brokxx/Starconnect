@@ -127,10 +127,8 @@
                 </div>
 
                 <div class="contact-form-block">
-                    <!-- TODO: replace REPLACE_ME with your Formspree form ID (free at formspree.io, messages forwarded to your Gmail) -->
-                    <form class="contact-form" action="https://formspree.io/f/REPLACE_ME" method="POST">
-                        <input type="hidden" name="_subject" value="Nouveau message depuis StarConnect Solutions">
-                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <!-- TODO: remplacer par un handler PHP/Formspree. Pour l'instant: mailto via JS submit handler -->
+                    <form class="contact-form" id="contact-mailto-form">
                         <div class="form-group">
                             <label for="name" data-i18n="contact.form.name">Your name</label>
                             <input type="text" id="name" name="name" data-i18n-attr="placeholder:contact.form.name">
@@ -193,6 +191,6 @@
 
     <script src="i18n.js?v=38"></script>
     <script src="i18n-extra.js?v=38"></script>
-    <script src="script.js?v=38"></script>
+    <script src="script.js?v=39"></script>
 </body>
 </html>

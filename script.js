@@ -263,6 +263,24 @@
     });
 })();
 
+// ===== CONTACT FORM MAILTO FALLBACK =====
+(function() {
+    var form = document.getElementById('contact-mailto-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = (form.querySelector('[name="name"]').value || '').trim();
+        var email = (form.querySelector('[name="email"]').value || '').trim();
+        var subject = (form.querySelector('[name="subject"]').value || '').trim();
+        var message = (form.querySelector('[name="message"]').value || '').trim();
+        var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+        var mailto = 'mailto:carle@starconnectsolutions.com'
+            + '?subject=' + encodeURIComponent(subject || 'Contact from StarConnect website')
+            + '&body=' + encodeURIComponent(body);
+        window.location.href = mailto;
+    });
+})();
+
 // ===== BORDER GLOW (package cards + showcase panels) =====
 (function() {
     var cards = document.querySelectorAll('.package-card, .package-showcase-visual');
