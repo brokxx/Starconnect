@@ -658,6 +658,10 @@ bn: {
             }
         }
 
+        // mobile lang switcher label
+        var mobileCurrent = document.querySelectorAll('.mobile-lang-current');
+        mobileCurrent.forEach(function(el) { el.textContent = lang.toUpperCase(); });
+
         // active state in lang menu
         var options = document.querySelectorAll('.lang-option');
         options.forEach(function(opt) {
