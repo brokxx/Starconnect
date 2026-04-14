@@ -197,10 +197,14 @@
         });
     });
 
-    // Open all by default on mobile
-    if (isMobile()) {
+    function openAll() {
+        if (!isMobile()) return;
         cards.forEach(function(c) { c.classList.add('pkg-open'); });
     }
+
+    openAll();
+    // Re-open on bfcache restore (back/forward navigation)
+    window.addEventListener('pageshow', openAll);
 })();
 
 // ===== MOBILE LANG SWITCHER =====
