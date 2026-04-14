@@ -3815,7 +3815,8 @@ body {
         overflow: visible;
         border: none;
         background: transparent;
-        margin: 20px -10px 0 -10px;
+        margin: 20px -15px 0 -15px;
+        padding: 0 10px;
     }
 
     .comparison-table {
@@ -3832,36 +3833,43 @@ body {
 
     .comparison-table tr {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 54px 54px 54px;
+        grid-template-columns: 95px 1fr 1fr 1fr;
         align-items: center;
-        gap: 4px;
-        padding: 10px 8px;
+        gap: 5px;
+        padding: 10px 4px;
         border-bottom: 1px solid rgba(59, 130, 246, 0.08);
     }
 
     .comparison-table thead tr {
         border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+        padding-bottom: 12px;
+        padding-top: 4px;
     }
 
     .comparison-table th,
     .comparison-table td {
-        padding: 6px 4px;
-        font-size: 0.72rem;
+        padding: 4px 2px;
+        font-size: 0.68rem;
         text-align: center;
         background: transparent;
         border: none;
         text-transform: none;
         letter-spacing: 0;
+        white-space: normal;
+        word-break: normal;
+        hyphens: auto;
     }
 
     /* First column (Feature): left aligned, readable */
     .comparison-table th:first-child,
     .comparison-table td:first-child {
         text-align: left;
-        font-size: 0.78rem;
-        color: #b8c5d6;
-        padding-left: 6px;
+        font-size: 0.72rem;
+        color: #d0dce8;
+        padding-left: 4px;
+        padding-right: 4px;
         font-weight: 500;
+        line-height: 1.25;
     }
 
     /* Header pkg labels: hide i18n text, show short P1/P2/P3 */
@@ -3880,17 +3888,17 @@ body {
     .comparison-table thead th.pkg-col-2::after,
     .comparison-table thead th.pkg-col-3::after {
         font-family: 'Montserrat', sans-serif;
-        font-size: 0.78rem;
+        font-size: 0.9rem;
         font-weight: 800;
         letter-spacing: 0.08em;
     }
 
-    /* First column header label shorter on mobile */
+    /* First column header label */
     .comparison-table thead th:first-child {
-        font-size: 0.62rem;
+        font-size: 0.6rem !important;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.05em;
         color: #888;
     }
 
@@ -3898,27 +3906,63 @@ body {
     .comparison-table td.value-cell {
         color: #fff;
         font-weight: 500;
-        padding: 8px 4px;
+        padding: 8px 3px;
         border-radius: 6px;
-        line-height: 1.3;
+        line-height: 1.2;
+        min-height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .comparison-table tr td.value-cell:nth-child(2) {
-        background: rgba(79, 195, 247, 0.08);
+        background: rgba(79, 195, 247, 0.1);
     }
     .comparison-table tr td.value-cell:nth-child(3) {
-        background: rgba(149, 117, 205, 0.08);
+        background: rgba(149, 117, 205, 0.1);
     }
     .comparison-table tr td.value-cell:nth-child(4) {
-        background: rgba(255, 183, 77, 0.08);
+        background: rgba(255, 183, 77, 0.1);
     }
 
-    .comparison-table td.check-yes i {
-        font-size: 0.95rem;
+    /* Abbreviate long values on mobile via CSS */
+    .comparison-table td.value-cell[data-i18n="services.compare.val.cat7"] {
+        font-size: 0;
+    }
+    .comparison-table td.value-cell[data-i18n="services.compare.val.cat7"]::after {
+        content: 'CAT 7+';
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .comparison-table td.value-cell[data-i18n="services.compare.val.fiber"] {
+        font-size: 0;
+    }
+    .comparison-table td.value-cell[data-i18n="services.compare.val.fiber"]::after {
+        content: 'Fibre';
+        font-size: 0.7rem;
+        font-weight: 600;
+    }
+
+    .comparison-table td.value-cell[data-i18n="services.compare.val.cuivre"] {
+        font-size: 0.7rem;
+    }
+
+    .comparison-table td.value-cell[data-i18n="services.compare.val.option"] {
+        font-size: 0;
+    }
+    .comparison-table td.value-cell[data-i18n="services.compare.val.option"]::after {
+        content: 'Option';
+        font-size: 0.68rem;
+        font-weight: 600;
+    }
+
+    .comparison-table td.check-yes i,
+    .comparison-table td.check-no i {
+        font-size: 1rem;
     }
 
     .comparison-table td.check-no i {
-        font-size: 0.95rem;
         color: rgba(255, 255, 255, 0.25);
     }
 
