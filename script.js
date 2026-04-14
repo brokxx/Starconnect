@@ -181,6 +181,46 @@
     }
 })();
 
+// ===== MOBILE LANG SWITCHER =====
+(function() {
+    var wrapper = document.querySelector('.mobile-lang');
+    if (!wrapper) return;
+    var btn = wrapper.querySelector('.mobile-lang-btn');
+    var current = wrapper.querySelector('.mobile-lang-current');
+
+    // Toggle dropdown
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        wrapper.classList.toggle('open');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove('open');
+        }
+    });
+
+    // Close on selection (i18n.js handles language change)
+    wrapper.querySelectorAll('.lang-option').forEach(function(opt) {
+        opt.addEventListener('click', function() {
+            setTimeout(function() { wrapper.classList.remove('open'); }, 50);
+        });
+    });
+
+    // Update current label based on stored language
+    function updateLabel() {
+        var lang = (localStorage.getItem('starconnect_lang') || 'en').toUpperCase();
+        if (current) current.textContent = lang;
+    }
+    updateLabel();
+    // Re-run after a short delay for when i18n sets the lang
+    setTimeout(updateLabel, 100);
+    // Listen to storage changes
+    window.addEventListener('storage', updateLabel);
+})();
+
 // ===== SHINY TEXT (section titles) =====
 (function() {
     var selectors = [

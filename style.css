@@ -2158,7 +2158,8 @@ html[dir="rtl"] .package-number {
     color: var(--text);
     margin-bottom: 20px;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
-    line-height: 1.15;
+    line-height: 1.2;
+    white-space: pre-line;
 }
 
 .hero-content p {
@@ -3704,6 +3705,127 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     margin-bottom: 8px;
+}
+
+/* ===== MOBILE LANG SWITCHER (top header) ===== */
+.mobile-lang {
+    display: none;
+    position: relative;
+}
+
+.mobile-lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.mobile-lang-btn svg {
+    color: var(--accent);
+}
+
+.mobile-lang-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 120px;
+    background: #0a0e17;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 12px;
+    padding: 6px;
+    list-style: none;
+    margin: 0;
+    z-index: 1200;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-lang.open .mobile-lang-menu {
+    display: block;
+}
+
+.mobile-lang-menu li {
+    list-style: none;
+}
+
+.mobile-lang-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    color: #fff;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.mobile-lang-menu a:hover,
+.mobile-lang-menu a.active {
+    background: rgba(59, 130, 246, 0.15);
+}
+
+/* Show only on mobile */
+@media (max-width: 778px) {
+    .mobile-lang { display: block; }
+    /* Hide the desktop lang dropdown inside the hamburger sidenav on mobile */
+    .nav-menu > li.lang-dropdown { display: none !important; }
+}
+
+/* ===== MOBILE: center QR code in footer ===== */
+@media (max-width: 778px) {
+    .footer-contact {
+        text-align: center;
+    }
+    .footer-contact .footer-qr {
+        display: flex;
+        justify-content: center;
+        margin: 15px auto 0 auto;
+    }
+    .footer-contact .whatsapp-link {
+        display: inline-flex;
+        margin: 10px auto;
+    }
+}
+
+/* ===== MOBILE: packages as horizontal carousel ===== */
+@media (max-width: 778px) {
+    .package-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 16px;
+        padding: 20px 18px 10px 18px;
+        margin: 30px -18px 0 -18px;
+        scroll-padding: 0 18px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+    .package-grid::-webkit-scrollbar { display: none; }
+
+    .package-card {
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+        min-width: 280px;
+    }
+
+    /* Visual cue: subtle dots below (via pseudo on container) */
+    .package-grid + .package-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
 }
 
 /* Extra-small phones */

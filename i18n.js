@@ -42,7 +42,7 @@ fr: {
 
     // HOME
     "home.title": "StarConnect Solutions, la connectivité nouvelle génération",
-    "home.hero.title": "3 prix. 3 technologies. 1 stabilité.",
+    "home.hero.title": "3 prix, 3 technologies\n1 stabilité",
     "home.hero.subtitle": "La connectivité nouvelle génération pour vos immeubles, où que vous soyez.",
     "home.promise.title": "Notre promesse",
     "home.promise.text": "StarConnect Solutions déploie l'Internet haut débit par satellite Starlink combiné à trois architectures réseau sur mesure. Des immeubles résidentiels de Dubai Marina aux sites isolés du désert, nous connectons chaque unité avec la même exigence : fiabilité, performance, autonomie.",
@@ -195,7 +195,7 @@ en: {
     "footer.copyright": "Copyright 2026. All rights reserved to StarConnect Solutions",
 
     "home.title": "StarConnect Solutions, next generation connectivity",
-    "home.hero.title": "3 prices. 3 technologies. 1 stability.",
+    "home.hero.title": "3 prices, 3 technologies\n1 stability",
     "home.hero.subtitle": "Next generation connectivity for your buildings, wherever you are.",
     "home.promise.title": "Our promise",
     "home.promise.text": "StarConnect Solutions delivers Starlink high speed satellite Internet combined with three tailor made network architectures. From residential towers in Dubai Marina to isolated desert sites, we connect every unit with the same standard: reliability, performance, autonomy.",
@@ -341,7 +341,7 @@ ar: {
     "footer.copyright": "حقوق النشر 2026. جميع الحقوق محفوظة لشركة ستار كونكت سوليوشنز",
 
     "home.title": "ستار كونكت سوليوشنز، اتصال الجيل الجديد",
-    "home.hero.title": "3 أسعار. 3 تقنيات. استقرار واحد.",
+    "home.hero.title": "3 أسعار، 3 تقنيات\nاستقرار واحد",
     "home.hero.subtitle": "اتصال الجيل الجديد لمبانيكم، أينما كنتم.",
     "home.promise.title": "وعدنا",
     "home.promise.text": "تقدم ستار كونكت سوليوشنز خدمة الإنترنت عبر الأقمار الاصطناعية من ستارلينك مع ثلاث بنى شبكية مصممة خصيصاً. من الأبراج السكنية في مرسى دبي إلى المواقع النائية في الصحراء، نوصل كل وحدة بنفس المعيار: الموثوقية، الأداء، الاستقلالية.",
@@ -487,7 +487,7 @@ bn: {
     "footer.copyright": "কপিরাইট ২০২৬। সর্বস্বত্ব স্টারকানেক্ট সলিউশনস কর্তৃক সংরক্ষিত",
 
     "home.title": "স্টারকানেক্ট সলিউশনস, নতুন প্রজন্মের সংযোগ",
-    "home.hero.title": "৩ মূল্য। ৩ প্রযুক্তি। ১ স্থিতিশীলতা।",
+    "home.hero.title": "3 মূল্য, 3 প্রযুক্তি\n1 স্থিতিশীলতা",
     "home.hero.subtitle": "আপনার ভবনের জন্য নতুন প্রজন্মের সংযোগ, যেখানেই থাকুন।",
     "home.promise.title": "আমাদের প্রতিশ্রুতি",
     "home.promise.text": "স্টারকানেক্ট সলিউশনস স্টারলিংকের উচ্চগতির স্যাটেলাইট ইন্টারনেট সরবরাহ করে তিনটি বিশেষভাবে তৈরি নেটওয়ার্ক স্থাপত্যের সাথে। দুবাই মেরিনার আবাসিক ভবন থেকে শুরু করে মরুভূমির বিচ্ছিন্ন সাইট পর্যন্ত, আমরা প্রতিটি ইউনিট সংযুক্ত করি একই মানে: নির্ভরযোগ্যতা, কর্মক্ষমতা, স্বাধীনতা।",
