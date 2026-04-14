@@ -4057,8 +4057,11 @@ body {
         max-height: 0;
         overflow: hidden;
         opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.25s ease, margin 0.3s ease, padding 0.3s ease;
+        transition: max-height 0.4s ease, opacity 0.25s ease, margin 0.3s ease, padding 0.3s ease, border-color 0.3s ease;
         margin: 0 22px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-top-color: transparent;
     }
 
     .package-card.pkg-open .package-tagline {
