@@ -199,9 +199,9 @@
         });
     });
 
-    // Open first by default on mobile
-    if (isMobile() && cards[0]) {
-        cards[0].classList.add('pkg-open');
+    // Open all by default on mobile
+    if (isMobile()) {
+        cards.forEach(function(c) { c.classList.add('pkg-open'); });
     }
 })();
 
