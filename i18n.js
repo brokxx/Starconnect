@@ -42,7 +42,7 @@ fr: {
 
     // HOME
     "home.title": "StarConnect Solutions, la connectivité nouvelle génération",
-    "home.hero.title.line1": "3 prix, 3 technologies",
+    "home.hero.title.line1": "3 prix 3 technologies",
     "home.hero.title.line2": "1 stabilité",
     "home.hero.subtitle": "La connectivité nouvelle génération pour vos immeubles, où que vous soyez.",
     "home.promise.title": "Notre promesse",
@@ -196,7 +196,7 @@ en: {
     "footer.copyright": "Copyright 2026. All rights reserved to StarConnect Solutions",
 
     "home.title": "StarConnect Solutions, next generation connectivity",
-    "home.hero.title.line1": "3 prices, 3 technologies",
+    "home.hero.title.line1": "3 prices 3 technologies",
     "home.hero.title.line2": "1 stability",
     "home.hero.subtitle": "Next generation connectivity for your buildings, wherever you are.",
     "home.promise.title": "Our promise",
@@ -343,7 +343,7 @@ ar: {
     "footer.copyright": "حقوق النشر 2026. جميع الحقوق محفوظة لشركة ستار كونكت سوليوشنز",
 
     "home.title": "ستار كونكت سوليوشنز، اتصال الجيل الجديد",
-    "home.hero.title.line1": "3 أسعار، 3 تقنيات",
+    "home.hero.title.line1": "3 أسعار 3 تقنيات",
     "home.hero.title.line2": "استقرار واحد",
     "home.hero.subtitle": "اتصال الجيل الجديد لمبانيكم، أينما كنتم.",
     "home.promise.title": "وعدنا",
@@ -490,7 +490,7 @@ bn: {
     "footer.copyright": "কপিরাইট ২০২৬। সর্বস্বত্ব স্টারকানেক্ট সলিউশনস কর্তৃক সংরক্ষিত",
 
     "home.title": "স্টারকানেক্ট সলিউশনস, নতুন প্রজন্মের সংযোগ",
-    "home.hero.title.line1": "3 মূল্য, 3 প্রযুক্তি",
+    "home.hero.title.line1": "3 মূল্য 3 প্রযুক্তি",
     "home.hero.title.line2": "1 স্থিতিশীলতা",
     "home.hero.subtitle": "আপনার ভবনের জন্য নতুন প্রজন্মের সংযোগ, যেখানেই থাকুন।",
     "home.promise.title": "আমাদের প্রতিশ্রুতি",
